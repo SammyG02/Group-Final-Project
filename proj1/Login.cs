@@ -15,6 +15,7 @@ namespace proj1
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -34,6 +35,26 @@ namespace proj1
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxShowPassword.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+
+            }
 
         }
     }

@@ -35,14 +35,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSignupPassword = new System.Windows.Forms.TextBox();
+            this.txtConPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSignupShowPassword = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -55,6 +57,7 @@
             this.label5.Size = new System.Drawing.Size(43, 47);
             this.label5.TabIndex = 10;
             this.label5.Text = "X";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel1
             // 
@@ -81,7 +84,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label1.Location = new System.Drawing.Point(586, 119);
+            this.label1.Location = new System.Drawing.Point(573, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 47);
             this.label1.TabIndex = 13;
@@ -102,8 +105,8 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 18F);
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(509, 253);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
@@ -122,31 +125,33 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Password";
             // 
-            // textBox2
+            // txtSignupPassword
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(509, 342);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(350, 42);
-            this.textBox2.TabIndex = 17;
+            this.txtSignupPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtSignupPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSignupPassword.Font = new System.Drawing.Font("Nirmala UI", 18F);
+            this.txtSignupPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtSignupPassword.Location = new System.Drawing.Point(509, 342);
+            this.txtSignupPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSignupPassword.Multiline = true;
+            this.txtSignupPassword.Name = "txtSignupPassword";
+            this.txtSignupPassword.PasswordChar = '*';
+            this.txtSignupPassword.Size = new System.Drawing.Size(350, 42);
+            this.txtSignupPassword.TabIndex = 17;
             // 
-            // textBox3
+            // txtConPassword
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(509, 436);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(350, 42);
-            this.textBox3.TabIndex = 18;
+            this.txtConPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtConPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtConPassword.Font = new System.Drawing.Font("Nirmala UI", 18F);
+            this.txtConPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtConPassword.Location = new System.Drawing.Point(509, 436);
+            this.txtConPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConPassword.Multiline = true;
+            this.txtConPassword.Name = "txtConPassword";
+            this.txtConPassword.PasswordChar = '*';
+            this.txtConPassword.Size = new System.Drawing.Size(350, 42);
+            this.txtConPassword.TabIndex = 18;
             // 
             // label6
             // 
@@ -170,12 +175,13 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(350, 65);
             this.button1.TabIndex = 20;
-            this.button1.Text = "LOGIN";
+            this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.No;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label7.Location = new System.Drawing.Point(567, 717);
@@ -198,23 +204,25 @@
             this.button2.Text = "CLEAR";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // checkBoxSignupShowPassword
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.checkBox1.Location = new System.Drawing.Point(716, 486);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(143, 25);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "Show Password";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSignupShowPassword.AutoSize = true;
+            this.checkBoxSignupShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBoxSignupShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxSignupShowPassword.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSignupShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.checkBoxSignupShowPassword.Location = new System.Drawing.Point(716, 486);
+            this.checkBoxSignupShowPassword.Name = "checkBoxSignupShowPassword";
+            this.checkBoxSignupShowPassword.Size = new System.Drawing.Size(143, 25);
+            this.checkBoxSignupShowPassword.TabIndex = 23;
+            this.checkBoxSignupShowPassword.Text = "Show Password";
+            this.checkBoxSignupShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxSignupShowPassword.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(616, 742);
@@ -223,20 +231,31 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Back To Login";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::proj1.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(627, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // signUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1042, 830);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxSignupShowPassword);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtConPassword);
+            this.Controls.Add(this.txtSignupPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -247,6 +266,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "signUp";
             this.Text = "signUp";
+            this.Load += new System.EventHandler(this.signUp_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,13 +282,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSignupPassword;
+        private System.Windows.Forms.TextBox txtConPassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxSignupShowPassword;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

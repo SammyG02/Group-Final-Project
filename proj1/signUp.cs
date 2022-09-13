@@ -16,5 +16,31 @@ namespace proj1
         {
             InitializeComponent();
         }
+
+        private void signUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSignupShowPassword.Checked)
+            {
+                txtSignupPassword.PasswordChar = '\0';
+                txtConPassword.PasswordChar = '\0';
+
+            }
+            else
+            {
+                txtConPassword.PasswordChar = '*';
+                txtSignupPassword.PasswordChar = '*';
+
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }

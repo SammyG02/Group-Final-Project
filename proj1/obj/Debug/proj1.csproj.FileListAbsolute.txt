@@ -1,0 +1,56 @@
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\bin\Debug\proj1.exe.config
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\bin\Debug\proj1.exe
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\bin\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.csproj.AssemblyReference.cache
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.Form1.resources
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.Properties.Resources.resources
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.csproj.GenerateResource.cache
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.csproj.CoreCompileInputs.cache
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.exe
+C:\Users\Samuel\Desktop\1 Term\Windows Programming\assignments\Project01\proj1\proj1\obj\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\bin\Debug\proj1.exe.config
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\bin\Debug\proj1.exe
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\bin\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.AssemblyReference.cache
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.Form1.resources
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.Properties.Resources.resources
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.GenerateResource.cache
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.CoreCompileInputs.cache
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.exe
+C:\Users\Samuel\Desktop\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\bin\Debug\proj1.exe.config
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\bin\Debug\proj1.exe
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\bin\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.AssemblyReference.cache
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.Form1.resources
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.Properties.Resources.resources
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.GenerateResource.cache
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.CoreCompileInputs.cache
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.exe
+C:\Users\Samuel\Desktop\Movies\Project01-main\Project01-main\proj1\proj1\obj\Debug\proj1.pdb
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\bin\Debug\proj1.exe.config
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\bin\Debug\proj1.exe
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\bin\Debug\proj1.pdb
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.csproj.AssemblyReference.cache
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.Form1.resources
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.Properties.Resources.resources
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.csproj.GenerateResource.cache
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.csproj.CoreCompileInputs.cache
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.exe
+C:\Users\Samuel\Documents\GitHub\Project01\proj1\proj1\obj\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\bin\Debug\proj1.exe.config
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\bin\Debug\proj1.exe
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\bin\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.AssemblyReference.cache
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.Form1.resources
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.Properties.Resources.resources
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.GenerateResource.cache
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.csproj.CoreCompileInputs.cache
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.exe
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.pdb
+C:\Users\Samuel\Desktop\Project1\Project01-main\proj1\proj1\obj\Debug\proj1.Login.resources

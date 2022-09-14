@@ -42,5 +42,11 @@ namespace proj1
         {
             System.Environment.Exit(0);
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
     }
 }

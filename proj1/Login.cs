@@ -57,5 +57,11 @@ namespace proj1
             }
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            new signUp().Show();
+            this.Hide();
+        }
     }
 }

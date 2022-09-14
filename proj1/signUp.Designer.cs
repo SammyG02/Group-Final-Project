@@ -230,6 +230,7 @@
             this.label8.Size = new System.Drawing.Size(136, 25);
             this.label8.TabIndex = 24;
             this.label8.Text = "Back To Login";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBox1
             // 
@@ -265,6 +266,7 @@
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "signUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "signUp";
             this.Load += new System.EventHandler(this.signUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -19,7 +19,13 @@ namespace proj1
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            Customer cust = new Customer();
+            cust.MdiParent = this;
+            cust.Show();
         }
 
         private void btnAlalytics_Click(object sender, EventArgs e)

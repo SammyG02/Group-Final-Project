@@ -12,8 +12,13 @@ using System.Text.RegularExpressions;
 
 namespace proj1
 {
+    
+
     public partial class Customer : Form
     {
+
+        int index;
+        BindingList<CustomerClass> del;
         public Customer()
         {
             InitializeComponent();
@@ -22,8 +27,9 @@ namespace proj1
         private void btnAdd_Click(object sender, EventArgs e)
         {
             errorP.Clear();
-            Regex checkN = new Regex(@"^([^0-9]*)$");
-
+            Regex checkId = new Regex(@"^([0-9]*)$");
+            Regex checkName = new Regex(@"^([^0-9]*)$");
+            
             if (string.IsNullOrEmpty(txtId.Text))
             {
                 errorP.SetError(txtId, "Id is needed");
@@ -41,8 +47,11 @@ namespace proj1
                 errorP.SetError(comboCategory, "Name is needed");
             }
 
-
-            else if (!checkN.IsMatch(txtName.Text))
+            else if (!checkId.IsMatch(txtId.Text))
+            {
+                errorP.SetError(txtId, "Customer Id can't include letters");
+            }
+            else if (!checkName.IsMatch(txtName.Text))
             {
                 errorP.SetError(txtName, "Customer Name can't include numbers");
             }
@@ -74,22 +83,86 @@ namespace proj1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+                       
+            try
+            {
+                DataGridViewRow upd = DGV.Rows[index];
+
+                var confirmResult = MessageBox.Show("Are you sure to update this row",
+                                     "Update the list",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                
+                        
+                        upd.Cells[0].Value = txtId.Text;
+                        upd.Cells[1].Value = dateTimePicker1.Text;
+                        upd.Cells[2].Value = txtName.Text;
+                        upd.Cells[3].Value = comboItem.Text;
+                        upd.Cells[4].Value = comboCategory.Text;
+                
+                }
+
+                else
+                {
+
+                }
+            
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("User can't Update without adding something");
+            }
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void newDelete()
         {
 
+            foreach (DataGridViewRow item in this.DGV.SelectedRows)
+            {
+                DGV.Rows.RemoveAt(item.Index);
+            }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            newDelete();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
-            txtId.Text = "";
-            txtName.Text = "";
-            comboItem.Text = "";
-            comboCategory.Text = "";
 
+            var confirmResult = MessageBox.Show("Are you sure to Clear the Textbox",
+                                     "Clear the TextBox",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                txtId.Text = "";
+                txtName.Text = "";
+                comboItem.Text = "";
+                comboCategory.Text = "";
+            }
+             
+            else { }
+                        
+        }
+
+        private void DGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                index = e.RowIndex;
+                DataGridViewRow row = DGV.Rows[index];
+                txtId.Text = row.Cells[0].Value.ToString();
+                dateTimePicker1.Text = row.Cells[1].Value.ToString();
+                txtName.Text = row.Cells[2].Value.ToString();
+                comboItem.Text = row.Cells[3].Value.ToString();
+                comboCategory.Text = row.Cells[4].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Type MisMatch");
+            }
         }
     }
 }

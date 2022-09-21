@@ -1,0 +1,14 @@
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\bin\Release\proj1.exe.config
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\bin\Release\proj1.exe
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\bin\Release\proj1.pdb
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.csproj.AssemblyReference.cache
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.Customer.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.Form1.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.Login.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.Properties.Resources.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.signUp.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.csproj.GenerateResource.cache
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.csproj.CoreCompileInputs.cache
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.exe
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Release\proj1.pdb

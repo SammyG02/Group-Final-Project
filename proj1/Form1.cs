@@ -35,7 +35,22 @@ namespace proj1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MdiClient ctlMDI;
 
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    ctlMDI = (MdiClient)ctl;
+
+                    ctlMDI.BackColor = this.BackColor;
+                }
+
+                catch(InvalidCastException exc)
+                {
+
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

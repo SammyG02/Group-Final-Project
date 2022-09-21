@@ -108,80 +108,78 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label1.Location = new System.Drawing.Point(13, 29);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(15, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 39);
+            this.label1.Size = new System.Drawing.Size(34, 30);
             this.label1.TabIndex = 4;
             this.label1.Text = "Id";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label2.Location = new System.Drawing.Point(114, 135);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(63, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 39);
+            this.label2.Size = new System.Drawing.Size(74, 30);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label3.Location = new System.Drawing.Point(425, 31);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(437, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 39);
+            this.label3.Size = new System.Drawing.Size(62, 30);
             this.label3.TabIndex = 6;
             this.label3.Text = "Date";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label4.Location = new System.Drawing.Point(13, 209);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label4.Location = new System.Drawing.Point(15, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 39);
+            this.label4.Size = new System.Drawing.Size(71, 30);
             this.label4.TabIndex = 7;
             this.label4.Text = "Items";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label5.Location = new System.Drawing.Point(412, 209);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.Location = new System.Drawing.Point(427, 216);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 39);
+            this.label5.Size = new System.Drawing.Size(109, 30);
             this.label5.TabIndex = 8;
             this.label5.Text = "Category";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(77, 46);
+            this.txtId.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtId.Location = new System.Drawing.Point(77, 39);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(242, 22);
             this.txtId.TabIndex = 9;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(234, 149);
+            this.txtName.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtName.Location = new System.Drawing.Point(193, 125);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(492, 22);
+            this.txtName.Size = new System.Drawing.Size(588, 22);
             this.txtName.TabIndex = 11;
             // 
             // comboItem
             // 
+            this.comboItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboItem.FormattingEnabled = true;
             this.comboItem.Items.AddRange(new object[] {
             "T-Shirts",
@@ -195,6 +193,7 @@
             // 
             // comboCategory
             // 
+            this.comboCategory.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboCategory.FormattingEnabled = true;
             this.comboCategory.Items.AddRange(new object[] {
             "Nike",
@@ -208,13 +207,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(523, 44);
+            this.dateTimePicker1.Location = new System.Drawing.Point(523, 39);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(365, 22);
             this.dateTimePicker1.TabIndex = 14;
             // 
             // DGV
             // 
+            this.DGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV.Location = new System.Drawing.Point(12, 254);
             this.DGV.Name = "DGV";
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(900, 640);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.dateTimePicker1);
@@ -251,6 +251,7 @@
             this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Customer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer";
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();

@@ -13,7 +13,7 @@ namespace proj1.Model
 {
     internal class CustomerClass
     {
-        static private BindingList<CustomerClass> custom = new BindingList<CustomerClass>();
+        static private List<CustomerClass> custom = new List<CustomerClass>();
       
         public int CustomerID { get; set; }
         public string CustomerDate { get; set; }
@@ -27,7 +27,7 @@ namespace proj1.Model
 
         }
 
-        static public BindingList<CustomerClass> GetAllProducts()
+        static public List<CustomerClass> GetAllProducts()
         {
             return custom;
         }

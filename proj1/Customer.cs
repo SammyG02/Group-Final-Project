@@ -18,7 +18,7 @@ namespace proj1
     {
 
         int index;
-        BindingList<CustomerClass> del;
+        
         public Customer()
         {
             InitializeComponent();
@@ -115,18 +115,16 @@ namespace proj1
             }
 
         }
-
-        private void newDelete()
-        {
-
-            foreach (DataGridViewRow item in this.DGV.SelectedRows)
-            {
-                DGV.Rows.RemoveAt(item.Index);
-            }
-        }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            newDelete();
+
+            DataGridViewRow del = DGV.Rows[index];
+
+            
+            del.Cells[1].Value = "";
+            del.Cells[2].Value = "";
+            del.Cells[3].Value = "";
+            del.Cells[4].Value = "";
         }
 
         private void btnClear_Click(object sender, EventArgs e)

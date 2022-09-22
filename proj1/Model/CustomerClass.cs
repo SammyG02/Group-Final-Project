@@ -18,8 +18,11 @@ namespace proj1.Model
         public int CustomerID { get; set; }
         public string CustomerDate { get; set; }
         public string CustomerName { get; set; }
-        public string CustomerItem { get; set; }
-        public string CustomerCategory { get; set; }
+        public string CustomerEmail { get; set; }
+        public string CustomerPhone { get; set; }
+        public string CustomerAcc { get; set; }
+
+
 
         public void Saved()
         {

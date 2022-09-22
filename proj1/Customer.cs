@@ -29,7 +29,9 @@ namespace proj1
             errorP.Clear();
             Regex checkId = new Regex(@"^([0-9]*)$");
             Regex checkName = new Regex(@"^([^0-9]*)$");
-            
+            Regex checkEmail = new Regex(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
+           
+
             if (string.IsNullOrEmpty(txtId.Text))
             {
                 errorP.SetError(txtId, "Id is needed");
@@ -38,13 +40,17 @@ namespace proj1
             {
                 errorP.SetError(txtName, "Name is needed");
             }
-            else if (string.IsNullOrEmpty(comboItem.Text))
+            else if (string.IsNullOrEmpty(txtEmail.Text))
             {
-                errorP.SetError(comboItem, "Name is needed");
+                errorP.SetError(txtEmail, "Email is needed");
             }
-            else if (string.IsNullOrEmpty(comboCategory.Text))
+            else if (string.IsNullOrEmpty(txtPhone.Text))
             {
-                errorP.SetError(comboCategory, "Name is needed");
+                errorP.SetError(txtPhone, "Phone Number is needed");
+            }
+            else if (string.IsNullOrEmpty(txtAcc.Text))
+            {
+                errorP.SetError(txtAcc, "Account is needed");
             }
 
             else if (!checkId.IsMatch(txtId.Text))
@@ -54,6 +60,19 @@ namespace proj1
             else if (!checkName.IsMatch(txtName.Text))
             {
                 errorP.SetError(txtName, "Customer Name can't include numbers");
+            }
+            else if (!checkEmail.IsMatch(txtEmail.Text))
+            {
+                errorP.SetError(txtEmail, "Customer Email must include @");
+                MessageBox.Show("Customer Email must include @");
+            }
+            else if (!checkId.IsMatch(txtPhone.Text))
+            {
+                errorP.SetError(txtPhone, "Phone can't include letters");
+            }
+            else if (!checkId.IsMatch(txtAcc.Text))
+            {
+                errorP.SetError(txtAcc, "Account Id can't include letters");
             }
 
             else
@@ -65,9 +84,9 @@ namespace proj1
                         CustomerID = int.Parse(txtId.Text),
                         CustomerDate = dateTimePicker1.Text,
                         CustomerName = txtName.Text,
-                        CustomerItem = comboItem.Text,
-                        CustomerCategory = comboCategory.Text,
-
+                        CustomerEmail = txtEmail.Text,
+                        CustomerPhone = txtPhone.Text,
+                        CustomerAcc = txtAcc.Text,
                     };
                     cc.Saved();
                     DGV.DataSource = null;
@@ -98,9 +117,9 @@ namespace proj1
                         upd.Cells[0].Value = txtId.Text;
                         upd.Cells[1].Value = dateTimePicker1.Text;
                         upd.Cells[2].Value = txtName.Text;
-                        upd.Cells[3].Value = comboItem.Text;
-                        upd.Cells[4].Value = comboCategory.Text;
-                
+                        upd.Cells[3].Value = txtEmail.Text;
+                        upd.Cells[4].Value = txtPhone.Text;
+                        upd.Cells[5].Value = txtAcc.Text;
                 }
 
                 else
@@ -125,6 +144,7 @@ namespace proj1
             del.Cells[2].Value = "";
             del.Cells[3].Value = "";
             del.Cells[4].Value = "";
+            del.Cells[5].Value = "";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -137,8 +157,9 @@ namespace proj1
             {
                 txtId.Text = "";
                 txtName.Text = "";
-                comboItem.Text = "";
-                comboCategory.Text = "";
+                txtEmail.Text = "";
+                txtPhone.Text = "";
+                txtAcc.Text = "";
             }
              
             else { }
@@ -154,8 +175,9 @@ namespace proj1
                 txtId.Text = row.Cells[0].Value.ToString();
                 dateTimePicker1.Text = row.Cells[1].Value.ToString();
                 txtName.Text = row.Cells[2].Value.ToString();
-                comboItem.Text = row.Cells[3].Value.ToString();
-                comboCategory.Text = row.Cells[4].Value.ToString();
+                txtEmail.Text = row.Cells[3].Value.ToString();
+                txtPhone.Text = row.Cells[4].Value.ToString();
+                txtAcc.Text = row.Cells[5].Value.ToString();
             }
             catch (Exception)
             {

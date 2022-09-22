@@ -36,15 +36,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.comboItem = new System.Windows.Forms.ComboBox();
-            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.DGV = new System.Windows.Forms.DataGridView();
             this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtAcc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
@@ -111,9 +113,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(15, 31);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 30);
+            this.label1.Size = new System.Drawing.Size(43, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "Id";
             // 
@@ -122,9 +124,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(63, 117);
+            this.label2.Location = new System.Drawing.Point(12, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 30);
+            this.label2.Size = new System.Drawing.Size(93, 37);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name";
             // 
@@ -133,38 +135,16 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(437, 31);
+            this.label3.Location = new System.Drawing.Point(439, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 30);
+            this.label3.Size = new System.Drawing.Size(78, 37);
             this.label3.TabIndex = 6;
             this.label3.Text = "Date";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(15, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 30);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Items";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(427, 216);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 30);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Category";
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtId.Location = new System.Drawing.Point(77, 39);
+            this.txtId.Location = new System.Drawing.Point(61, 23);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(242, 22);
             this.txtId.TabIndex = 9;
@@ -172,42 +152,14 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtName.Location = new System.Drawing.Point(193, 125);
+            this.txtName.Location = new System.Drawing.Point(128, 101);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(588, 22);
             this.txtName.TabIndex = 11;
             // 
-            // comboItem
-            // 
-            this.comboItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboItem.FormattingEnabled = true;
-            this.comboItem.Items.AddRange(new object[] {
-            "T-Shirts",
-            "Shirts",
-            "Trousers",
-            "Shoe"});
-            this.comboItem.Location = new System.Drawing.Point(124, 223);
-            this.comboItem.Name = "comboItem";
-            this.comboItem.Size = new System.Drawing.Size(271, 24);
-            this.comboItem.TabIndex = 12;
-            // 
-            // comboCategory
-            // 
-            this.comboCategory.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Items.AddRange(new object[] {
-            "Nike",
-            "Adidas",
-            "Lacoste",
-            "Hugo Boss"});
-            this.comboCategory.Location = new System.Drawing.Point(571, 224);
-            this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(317, 24);
-            this.comboCategory.TabIndex = 13;
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(523, 39);
+            this.dateTimePicker1.Location = new System.Drawing.Point(523, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(365, 22);
             this.dateTimePicker1.TabIndex = 14;
@@ -228,20 +180,79 @@
             // 
             this.errorP.ContainerControl = this;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label6.Location = new System.Drawing.Point(12, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 37);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Email";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label7.Location = new System.Drawing.Point(12, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 37);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Phone";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label8.Location = new System.Drawing.Point(439, 204);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 37);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Account";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtEmail.Location = new System.Drawing.Point(128, 156);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(588, 22);
+            this.txtEmail.TabIndex = 19;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtPhone.Location = new System.Drawing.Point(116, 218);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(261, 22);
+            this.txtPhone.TabIndex = 20;
+            // 
+            // txtAcc
+            // 
+            this.txtAcc.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtAcc.Location = new System.Drawing.Point(567, 218);
+            this.txtAcc.Name = "txtAcc";
+            this.txtAcc.Size = new System.Drawing.Size(261, 22);
+            this.txtAcc.TabIndex = 21;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(900, 640);
+            this.Controls.Add(this.txtAcc);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboCategory);
-            this.Controls.Add(this.comboItem);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -269,14 +280,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox comboItem;
-        private System.Windows.Forms.ComboBox comboCategory;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView DGV;
         private System.Windows.Forms.ErrorProvider errorP;
+        private System.Windows.Forms.TextBox txtAcc;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

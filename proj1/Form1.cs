@@ -72,5 +72,16 @@ namespace proj1
         {
             System.Environment.Exit(0);
         }
+
+        private void btnCalander_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            Category cate = new Category();
+            cate.MdiParent = this;
+            cate.Show();
+        }
     }
 }

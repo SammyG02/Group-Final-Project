@@ -103,7 +103,7 @@ namespace proj1
 
 
                 del.Cells[1].Value = "";
-                del.Cells[2].Value = "";
+               
 
             }
 

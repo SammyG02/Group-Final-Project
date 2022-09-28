@@ -30,7 +30,13 @@ namespace proj1
 
         private void btnAlalytics_Click(object sender, EventArgs e)
         {
-
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            Item cate = new Item();
+            cate.MdiParent = this;
+            cate.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

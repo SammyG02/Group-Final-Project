@@ -52,33 +52,33 @@ namespace proj1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(34, 100);
+            this.label1.Location = new System.Drawing.Point(34, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 19);
+            this.label1.Size = new System.Drawing.Size(74, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(304, 100);
+            this.label2.Location = new System.Drawing.Point(262, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 19);
+            this.label2.Size = new System.Drawing.Size(36, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(599, 100);
+            this.label3.Location = new System.Drawing.Point(510, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 19);
+            this.label3.Size = new System.Drawing.Size(77, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "Status";
             // 
@@ -87,9 +87,9 @@ namespace proj1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(68, 9);
+            this.label4.Location = new System.Drawing.Point(291, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 33);
+            this.label4.Size = new System.Drawing.Size(79, 27);
             this.label4.TabIndex = 3;
             this.label4.Text = "ITEMS";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -97,11 +97,11 @@ namespace proj1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(446, 100);
+            this.label5.Location = new System.Drawing.Point(34, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(104, 30);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quantity";
             // 
@@ -110,9 +110,9 @@ namespace proj1
             this.nametxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.nametxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nametxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nametxt.Location = new System.Drawing.Point(38, 124);
+            this.nametxt.Location = new System.Drawing.Point(37, 96);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(246, 22);
+            this.nametxt.Size = new System.Drawing.Size(182, 19);
             this.nametxt.TabIndex = 6;
             // 
             // idtxt
@@ -120,9 +120,9 @@ namespace proj1
             this.idtxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.idtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idtxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idtxt.Location = new System.Drawing.Point(308, 125);
+            this.idtxt.Location = new System.Drawing.Point(267, 127);
             this.idtxt.Name = "idtxt";
-            this.idtxt.Size = new System.Drawing.Size(104, 22);
+            this.idtxt.Size = new System.Drawing.Size(182, 19);
             this.idtxt.TabIndex = 7;
             // 
             // quantitytxt
@@ -130,9 +130,9 @@ namespace proj1
             this.quantitytxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.quantitytxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.quantitytxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantitytxt.Location = new System.Drawing.Point(438, 124);
+            this.quantitytxt.Location = new System.Drawing.Point(39, 170);
             this.quantitytxt.Name = "quantitytxt";
-            this.quantitytxt.Size = new System.Drawing.Size(111, 22);
+            this.quantitytxt.Size = new System.Drawing.Size(182, 19);
             this.quantitytxt.TabIndex = 8;
             // 
             // statchk
@@ -143,9 +143,9 @@ namespace proj1
             this.statchk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.statchk.Font = new System.Drawing.Font("Arial", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statchk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.statchk.Location = new System.Drawing.Point(594, 124);
+            this.statchk.Location = new System.Drawing.Point(515, 123);
             this.statchk.Name = "statchk";
-            this.statchk.Size = new System.Drawing.Size(72, 26);
+            this.statchk.Size = new System.Drawing.Size(61, 23);
             this.statchk.TabIndex = 9;
             this.statchk.Text = "In Stock";
             this.statchk.UseVisualStyleBackColor = false;
@@ -154,11 +154,11 @@ namespace proj1
             // 
             this.addbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addbtn.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addbtn.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.addbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.addbtn.Location = new System.Drawing.Point(23, 546);
+            this.addbtn.Location = new System.Drawing.Point(9, 426);
             this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(95, 34);
+            this.addbtn.Size = new System.Drawing.Size(151, 51);
             this.addbtn.TabIndex = 10;
             this.addbtn.Text = "Add";
             this.addbtn.UseVisualStyleBackColor = false;
@@ -168,11 +168,11 @@ namespace proj1
             // 
             this.updatebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.updatebtn.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.updatebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.updatebtn.Location = new System.Drawing.Point(284, 546);
+            this.updatebtn.Location = new System.Drawing.Point(176, 426);
             this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(111, 33);
+            this.updatebtn.Size = new System.Drawing.Size(151, 51);
             this.updatebtn.TabIndex = 11;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = false;
@@ -182,11 +182,11 @@ namespace proj1
             // 
             this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.removebtn.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removebtn.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.removebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.removebtn.Location = new System.Drawing.Point(421, 547);
+            this.removebtn.Location = new System.Drawing.Point(346, 426);
             this.removebtn.Name = "removebtn";
-            this.removebtn.Size = new System.Drawing.Size(99, 33);
+            this.removebtn.Size = new System.Drawing.Size(151, 51);
             this.removebtn.TabIndex = 12;
             this.removebtn.Text = "Remove";
             this.removebtn.UseVisualStyleBackColor = false;
@@ -196,11 +196,11 @@ namespace proj1
             // 
             this.ousbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.ousbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ousbtn.Font = new System.Drawing.Font("Arial Narrow", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ousbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ousbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.ousbtn.Location = new System.Drawing.Point(561, 555);
+            this.ousbtn.Location = new System.Drawing.Point(515, 426);
             this.ousbtn.Name = "ousbtn";
-            this.ousbtn.Size = new System.Drawing.Size(72, 24);
+            this.ousbtn.Size = new System.Drawing.Size(151, 51);
             this.ousbtn.TabIndex = 13;
             this.ousbtn.Text = "Out Of Stock";
             this.ousbtn.UseVisualStyleBackColor = false;
@@ -210,11 +210,11 @@ namespace proj1
             // 
             this.datagrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid.Location = new System.Drawing.Point(23, 189);
+            this.datagrid.Location = new System.Drawing.Point(9, 206);
             this.datagrid.Name = "datagrid";
             this.datagrid.RowHeadersWidth = 51;
             this.datagrid.RowTemplate.Height = 24;
-            this.datagrid.Size = new System.Drawing.Size(643, 301);
+            this.datagrid.Size = new System.Drawing.Size(657, 206);
             this.datagrid.TabIndex = 14;
             // 
             // errorhandler
@@ -223,10 +223,10 @@ namespace proj1
             // 
             // Item
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(686, 638);
+            this.ClientSize = new System.Drawing.Size(677, 530);
             this.Controls.Add(this.datagrid);
             this.Controls.Add(this.ousbtn);
             this.Controls.Add(this.removebtn);
@@ -244,7 +244,9 @@ namespace proj1
             this.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Item";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item";
+            this.Load += new System.EventHandler(this.Item_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorhandler)).EndInit();
             this.ResumeLayout(false);

@@ -52,7 +52,7 @@
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="CategoryClass.cs" />
+    <Compile Include="Model\CategoryClass.cs" />
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,7 +71,7 @@
     <Compile Include="Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemclass.cs" />
+    <Compile Include="Model\itemclass.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

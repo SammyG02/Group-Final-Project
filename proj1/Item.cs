@@ -150,5 +150,10 @@ namespace proj1
             del.Cells[3].Value = false;
            
         }
+
+        private void Item_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

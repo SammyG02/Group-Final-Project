@@ -19,6 +19,11 @@ namespace proj1
 
         private void btnContact_Click(object sender, EventArgs e)
         {
+            btnCustomer.ForeColor = Color.White;
+            btnItems.ForeColor = Color.Gray;
+            btnCategory.ForeColor = Color.Gray;
+            btnHome.ForeColor = Color.Gray;
+
             if (ActiveMdiChild != null)
             {
                 ActiveMdiChild.Close();
@@ -30,6 +35,11 @@ namespace proj1
 
         private void btnAlalytics_Click(object sender, EventArgs e)
         {
+            btnItems.ForeColor = Color.White;
+            btnCategory.ForeColor = Color.Gray;    
+            btnCustomer.ForeColor = Color.Gray;
+            btnHome.ForeColor = Color.Gray;
+            
             if (ActiveMdiChild != null)
             {
                 ActiveMdiChild.Close();
@@ -81,6 +91,12 @@ namespace proj1
 
         private void btnCalander_Click(object sender, EventArgs e)
         {
+            btnItems.ForeColor = Color.Gray;
+            btnCategory.ForeColor = Color.White;
+            btnCustomer.ForeColor = Color.Gray;
+            btnHome.ForeColor = Color.Gray;
+
+
             if (ActiveMdiChild != null)
             {
                 ActiveMdiChild.Close();
@@ -88,6 +104,20 @@ namespace proj1
             Category cate = new Category();
             cate.MdiParent = this;
             cate.Show();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            btnItems.ForeColor = Color.Gray;
+            btnCategory.ForeColor = Color.Gray;
+            btnCustomer.ForeColor = Color.Gray;
+            btnHome.ForeColor = Color.White;
+
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

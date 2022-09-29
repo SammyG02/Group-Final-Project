@@ -86,9 +86,11 @@
             // 
             this.DGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV.Location = new System.Drawing.Point(3, 194);
+            this.DGV.Location = new System.Drawing.Point(7, 165);
+            this.DGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DGV.Name = "DGV";
-            this.DGV.Size = new System.Drawing.Size(670, 266);
+            this.DGV.RowHeadersWidth = 51;
+            this.DGV.Size = new System.Drawing.Size(526, 165);
             this.DGV.TabIndex = 4;
             this.DGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellClick);
             this.DGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellContentClick);
@@ -99,9 +101,9 @@
             this.Addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Addbtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Addbtn.Location = new System.Drawing.Point(17, 468);
+            this.Addbtn.Location = new System.Drawing.Point(7, 341);
             this.Addbtn.Name = "Addbtn";
-            this.Addbtn.Size = new System.Drawing.Size(75, 40);
+            this.Addbtn.Size = new System.Drawing.Size(121, 41);
             this.Addbtn.TabIndex = 5;
             this.Addbtn.Text = "Add";
             this.Addbtn.UseVisualStyleBackColor = false;
@@ -113,9 +115,9 @@
             this.updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updatebtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.updatebtn.Location = new System.Drawing.Point(225, 468);
+            this.updatebtn.Location = new System.Drawing.Point(141, 341);
             this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(98, 40);
+            this.updatebtn.Size = new System.Drawing.Size(121, 41);
             this.updatebtn.TabIndex = 6;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = false;
@@ -127,9 +129,9 @@
             this.Deletbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Deletbtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.Deletbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Deletbtn.Location = new System.Drawing.Point(408, 468);
+            this.Deletbtn.Location = new System.Drawing.Point(277, 341);
             this.Deletbtn.Name = "Deletbtn";
-            this.Deletbtn.Size = new System.Drawing.Size(86, 40);
+            this.Deletbtn.Size = new System.Drawing.Size(121, 41);
             this.Deletbtn.TabIndex = 7;
             this.Deletbtn.Text = "Delete ";
             this.Deletbtn.UseVisualStyleBackColor = false;
@@ -141,9 +143,9 @@
             this.Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Clearbtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.Clearbtn.Location = new System.Drawing.Point(588, 468);
+            this.Clearbtn.Location = new System.Drawing.Point(412, 341);
             this.Clearbtn.Name = "Clearbtn";
-            this.Clearbtn.Size = new System.Drawing.Size(75, 40);
+            this.Clearbtn.Size = new System.Drawing.Size(121, 41);
             this.Clearbtn.TabIndex = 8;
             this.Clearbtn.Text = "Clear";
             this.Clearbtn.UseVisualStyleBackColor = false;

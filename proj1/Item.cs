@@ -28,10 +28,7 @@ namespace proj1
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            label6.Text = catagoryinput;
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -74,20 +71,20 @@ namespace proj1
                 {
                     itemclass cate = new itemclass
                     {
-                        itemid = int.Parse(idtxt.Text),
+                        ID = int.Parse(idtxt.Text),
 
-                        itemname = nametxt.Text,
+                        Item_Name = nametxt.Text,
 
-                        itemquant = int.Parse(quantitytxt.Text),
+                        Quntity = int.Parse(quantitytxt.Text),
 
-                        status = statchk.Checked,
+                        Status = statchk.Checked,
 
-                        catagoreyname = catagoryinput,
+                        Catagory = catagoryinput,
 
                     };
                     cate.Saved();
                     datagrid.DataSource = null;
-                    datagrid.DataSource = CategoryClass.GetAllProducts();
+                    datagrid.DataSource = itemclass.GetAllProducts();
                 }
 
                 catch (Exception)
@@ -131,7 +128,27 @@ namespace proj1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            DataGridViewRow del = datagrid.Rows[index];
 
+            var confirmResult = MessageBox.Show("Are you sure to remove this row", "Update the list", MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                del.Cells[0].Value = null;
+                del.Cells[1].Value = "";
+                del.Cells[2].Value = null;
+                del.Cells[3].Value = null;
+                del.Cells[4].Value = "";
+            }
+           
+        }
+
+        private void ousbtn_Click(object sender, EventArgs e)
+        {
+
+            DataGridViewRow del = datagrid.Rows[index];
+            
+            del.Cells[3].Value = false;
+           
         }
     }
 }

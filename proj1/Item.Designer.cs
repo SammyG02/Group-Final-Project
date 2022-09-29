@@ -35,7 +35,6 @@ namespace proj1
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.nametxt = new System.Windows.Forms.TextBox();
             this.idtxt = new System.Windows.Forms.TextBox();
             this.quantitytxt = new System.Windows.Forms.TextBox();
@@ -45,12 +44,7 @@ namespace proj1
             this.removebtn = new System.Windows.Forms.Button();
             this.ousbtn = new System.Windows.Forms.Button();
             this.datagrid = new System.Windows.Forms.DataGridView();
-            this.id_grid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorhandler = new System.Windows.Forms.ErrorProvider(this.components);
-            this.catagory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorhandler)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +53,8 @@ namespace proj1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 87);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(34, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 19);
             this.label1.TabIndex = 0;
@@ -69,7 +64,8 @@ namespace proj1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(332, 87);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(304, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 19);
             this.label2.TabIndex = 1;
@@ -79,7 +75,8 @@ namespace proj1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(633, 87);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(599, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 19);
             this.label3.TabIndex = 2;
@@ -89,170 +86,147 @@ namespace proj1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(215, 9);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label4.Location = new System.Drawing.Point(68, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 33);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Items ";
+            this.label4.Text = "ITEMS";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Black", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(465, 87);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label5.Location = new System.Drawing.Point(446, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quantity";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 33);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "\"catagory\'s\"";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // nametxt
             // 
-            this.nametxt.Location = new System.Drawing.Point(67, 125);
+            this.nametxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.nametxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nametxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nametxt.Location = new System.Drawing.Point(38, 124);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(246, 21);
+            this.nametxt.Size = new System.Drawing.Size(246, 22);
             this.nametxt.TabIndex = 6;
             // 
             // idtxt
             // 
-            this.idtxt.Location = new System.Drawing.Point(336, 125);
+            this.idtxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.idtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.idtxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idtxt.Location = new System.Drawing.Point(308, 125);
             this.idtxt.Name = "idtxt";
-            this.idtxt.Size = new System.Drawing.Size(104, 21);
+            this.idtxt.Size = new System.Drawing.Size(104, 22);
             this.idtxt.TabIndex = 7;
             // 
             // quantitytxt
             // 
-            this.quantitytxt.Location = new System.Drawing.Point(469, 124);
+            this.quantitytxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.quantitytxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.quantitytxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitytxt.Location = new System.Drawing.Point(438, 124);
             this.quantitytxt.Name = "quantitytxt";
-            this.quantitytxt.Size = new System.Drawing.Size(111, 21);
+            this.quantitytxt.Size = new System.Drawing.Size(111, 22);
             this.quantitytxt.TabIndex = 8;
             // 
             // statchk
             // 
             this.statchk.Appearance = System.Windows.Forms.Appearance.Button;
             this.statchk.AutoSize = true;
+            this.statchk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.statchk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.statchk.Font = new System.Drawing.Font("Arial", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statchk.Location = new System.Drawing.Point(637, 125);
+            this.statchk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.statchk.Location = new System.Drawing.Point(594, 124);
             this.statchk.Name = "statchk";
             this.statchk.Size = new System.Drawing.Size(72, 26);
             this.statchk.TabIndex = 9;
             this.statchk.Text = "In Stock";
-            this.statchk.UseVisualStyleBackColor = true;
+            this.statchk.UseVisualStyleBackColor = false;
             // 
             // addbtn
             // 
+            this.addbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbtn.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addbtn.Location = new System.Drawing.Point(67, 177);
+            this.addbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.addbtn.Location = new System.Drawing.Point(23, 546);
             this.addbtn.Name = "addbtn";
             this.addbtn.Size = new System.Drawing.Size(95, 34);
             this.addbtn.TabIndex = 10;
             this.addbtn.Text = "Add";
-            this.addbtn.UseVisualStyleBackColor = true;
+            this.addbtn.UseVisualStyleBackColor = false;
             this.addbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // updatebtn
             // 
+            this.updatebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updatebtn.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebtn.Location = new System.Drawing.Point(450, 177);
+            this.updatebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.updatebtn.Location = new System.Drawing.Point(284, 546);
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Size = new System.Drawing.Size(111, 33);
             this.updatebtn.TabIndex = 11;
             this.updatebtn.Text = "Update";
-            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.UseVisualStyleBackColor = false;
             this.updatebtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // removebtn
             // 
+            this.removebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.removebtn.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removebtn.Location = new System.Drawing.Point(567, 177);
+            this.removebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.removebtn.Location = new System.Drawing.Point(421, 547);
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(99, 33);
             this.removebtn.TabIndex = 12;
             this.removebtn.Text = "Remove";
-            this.removebtn.UseVisualStyleBackColor = true;
+            this.removebtn.UseVisualStyleBackColor = false;
             this.removebtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // ousbtn
             // 
+            this.ousbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.ousbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ousbtn.Font = new System.Drawing.Font("Arial Narrow", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ousbtn.Location = new System.Drawing.Point(697, 188);
+            this.ousbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.ousbtn.Location = new System.Drawing.Point(561, 555);
             this.ousbtn.Name = "ousbtn";
-            this.ousbtn.Size = new System.Drawing.Size(91, 22);
+            this.ousbtn.Size = new System.Drawing.Size(72, 24);
             this.ousbtn.TabIndex = 13;
             this.ousbtn.Text = "Out Of Stock";
-            this.ousbtn.UseVisualStyleBackColor = true;
+            this.ousbtn.UseVisualStyleBackColor = false;
+            this.ousbtn.Click += new System.EventHandler(this.ousbtn_Click);
             // 
             // datagrid
             // 
+            this.datagrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_grid,
-            this.name,
-            this.quantity,
-            this.status,
-            this.catagory});
-            this.datagrid.Location = new System.Drawing.Point(58, 245);
+            this.datagrid.Location = new System.Drawing.Point(23, 189);
             this.datagrid.Name = "datagrid";
             this.datagrid.RowHeadersWidth = 51;
             this.datagrid.RowTemplate.Height = 24;
-            this.datagrid.Size = new System.Drawing.Size(678, 150);
+            this.datagrid.Size = new System.Drawing.Size(643, 301);
             this.datagrid.TabIndex = 14;
-            // 
-            // id_grid
-            // 
-            this.id_grid.HeaderText = "ID";
-            this.id_grid.MinimumWidth = 6;
-            this.id_grid.Name = "id_grid";
-            this.id_grid.Width = 125;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.Width = 125;
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.MinimumWidth = 6;
-            this.quantity.Name = "quantity";
-            this.quantity.Width = 125;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.MinimumWidth = 6;
-            this.status.Name = "status";
-            this.status.Width = 125;
             // 
             // errorhandler
             // 
             this.errorhandler.ContainerControl = this;
             // 
-            // catagory
-            // 
-            this.catagory.HeaderText = "Catagory";
-            this.catagory.MinimumWidth = 6;
-            this.catagory.Name = "catagory";
-            this.catagory.Width = 125;
-            // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 422);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.ClientSize = new System.Drawing.Size(686, 638);
             this.Controls.Add(this.datagrid);
             this.Controls.Add(this.ousbtn);
             this.Controls.Add(this.removebtn);
@@ -262,13 +236,13 @@ namespace proj1
             this.Controls.Add(this.quantitytxt);
             this.Controls.Add(this.idtxt);
             this.Controls.Add(this.nametxt);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Item";
             this.Text = "Item";
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).EndInit();
@@ -285,7 +259,6 @@ namespace proj1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox nametxt;
         private System.Windows.Forms.TextBox idtxt;
         private System.Windows.Forms.TextBox quantitytxt;
@@ -295,11 +268,6 @@ namespace proj1
         private System.Windows.Forms.Button removebtn;
         private System.Windows.Forms.Button ousbtn;
         private System.Windows.Forms.DataGridView datagrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_grid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.ErrorProvider errorhandler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn catagory;
     }
 }

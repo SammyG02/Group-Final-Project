@@ -145,6 +145,8 @@ namespace proj1
             del.Cells[3].Value = "";
             del.Cells[4].Value = "";
             del.Cells[5].Value = "";
+           
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)

@@ -46,7 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtAcc = new System.Windows.Forms.TextBox();
+            this.txtBal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -172,7 +172,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(523, 23);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(246, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(278, 22);
             this.dateTimePicker1.TabIndex = 14;
             // 
             // DGV
@@ -245,14 +245,14 @@
             this.txtPhone.Size = new System.Drawing.Size(261, 22);
             this.txtPhone.TabIndex = 20;
             // 
-            // txtAcc
+            // txtBal
             // 
-            this.txtAcc.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtAcc.Location = new System.Drawing.Point(567, 218);
-            this.txtAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtAcc.Name = "txtAcc";
-            this.txtAcc.Size = new System.Drawing.Size(261, 22);
-            this.txtAcc.TabIndex = 21;
+            this.txtBal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtBal.Location = new System.Drawing.Point(567, 218);
+            this.txtBal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBal.Name = "txtBal";
+            this.txtBal.Size = new System.Drawing.Size(261, 22);
+            this.txtBal.TabIndex = 21;
             // 
             // label4
             // 
@@ -282,7 +282,7 @@
             this.ClientSize = new System.Drawing.Size(900, 640);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtAcc);
+            this.Controls.Add(this.txtBal);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label8);
@@ -304,6 +304,7 @@
             this.Name = "Customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer";
+            this.Load += new System.EventHandler(this.Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();
             this.ResumeLayout(false);
@@ -325,7 +326,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView DGV;
         private System.Windows.Forms.ErrorProvider errorP;
-        private System.Windows.Forms.TextBox txtAcc;
+        private System.Windows.Forms.TextBox txtBal;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace proj1
 {
@@ -18,12 +19,16 @@ namespace proj1
     {
 
         int index;
-        
+
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+
         public Customer()
         {
             InitializeComponent();
         }
 
+        
+        //Add Button
         private void btnAdd_Click(object sender, EventArgs e)
         {
             errorP.Clear();
@@ -36,6 +41,7 @@ namespace proj1
             {
                 errorP.SetError(txtId, "Id is needed");
             }
+            
             else if (string.IsNullOrEmpty(txtName.Text))
             {
                 errorP.SetError(txtName, "Name is needed");
@@ -48,9 +54,9 @@ namespace proj1
             {
                 errorP.SetError(txtPhone, "Phone Number is needed");
             }
-            else if (string.IsNullOrEmpty(txtAcc.Text))
+            else if (string.IsNullOrEmpty(txtBal.Text))
             {
-                errorP.SetError(txtAcc, "Account is needed");
+                errorP.SetError(txtBal, "Account is needed");
             }
             else if (string.IsNullOrEmpty(txtPass.Text))
             {
@@ -74,10 +80,11 @@ namespace proj1
             {
                 errorP.SetError(txtPhone, "Phone can't include letters");
             }
-            else if (!checkId.IsMatch(txtAcc.Text))
+            else if (!checkId.IsMatch(txtBal.Text))
             {
-                errorP.SetError(txtAcc, "Account Id can't include letters");
+                errorP.SetError(txtBal, "Account Id can't include letters");
             }
+
 
             else
             {
@@ -85,17 +92,16 @@ namespace proj1
                 {
                     CustomerClass cc = new CustomerClass
                     {
-                        CustomerID = txtId.Text,
-                        CustomerDate = dateTimePicker1.Text,
+                        CustomerID = txtId.Text,                        
                         CustomerName = txtName.Text,
-                        CustomerEmail = txtEmail.Text,
-                        CustomerPhone = txtPhone.Text,
-                        CustomerAcc = txtAcc.Text,
                         CustomerPass = txtPass.Text,
+                        CustomerPhone = txtPhone.Text,
+                        CustomerEmail = txtEmail.Text,                       
+                        CustomerBal = txtBal.Text,                        
+                        CustomerDate = dateTimePicker1.Text,
                     };
-                    cc.Saved();
-                    DGV.DataSource = null;
-                    DGV.DataSource = CustomerClass.GetAllProducts();
+                    cc.InsertData();
+                    DisplayData();
                 }
 
                 catch (Exception)
@@ -103,8 +109,10 @@ namespace proj1
                     MessageBox.Show("Type MisMatch");
                 }
             }
+
         }
 
+        //Update Button
         private void btnUpdate_Click(object sender, EventArgs e)
         {
                        
@@ -117,16 +125,21 @@ namespace proj1
                                      MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
                 {
-                
-                        
-                        upd.Cells[0].Value = txtId.Text;
-                        upd.Cells[1].Value = dateTimePicker1.Text;
-                        upd.Cells[2].Value = txtName.Text;
-                        upd.Cells[3].Value = txtEmail.Text;
-                        upd.Cells[4].Value = txtPhone.Text;
-                        upd.Cells[5].Value = txtAcc.Text;
-                        upd.Cells[6].Value = txtPass.Text;
+
+                        CustomerClass cc = new CustomerClass
+                        {
+                            CustomerID = txtId.Text,
+                            CustomerName = txtName.Text,
+                            CustomerPass = txtPass.Text,
+                            CustomerPhone = txtPhone.Text,
+                            CustomerEmail = txtEmail.Text,
+                            CustomerBal = txtBal.Text,
+                            CustomerDate = dateTimePicker1.Text,
+                        };
+                        cc.UpdateData();
+                        DisplayData();                                      
                 }
+
 
                 else
                 {
@@ -140,6 +153,8 @@ namespace proj1
             }
 
         }
+        
+        //Update Button
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
@@ -157,6 +172,8 @@ namespace proj1
 
         }
 
+        
+        //Clear Button
         private void btnClear_Click(object sender, EventArgs e)
         {
 
@@ -167,10 +184,11 @@ namespace proj1
             {
                 txtId.Text = "";
                 txtName.Text = "";
-                txtEmail.Text = "";
-                txtPhone.Text = "";
-                txtAcc.Text = "";
                 txtPass.Text = "";
+                txtPhone.Text = "";
+                txtEmail.Text = "";
+                txtBal.Text = "";
+                
             }
              
             else { }
@@ -184,12 +202,12 @@ namespace proj1
                 index = e.RowIndex;
                 DataGridViewRow row = DGV.Rows[index];
                 txtId.Text = row.Cells[0].Value.ToString();
-                dateTimePicker1.Text = row.Cells[1].Value.ToString();
-                txtName.Text = row.Cells[2].Value.ToString();
-                txtEmail.Text = row.Cells[3].Value.ToString();
-                txtPhone.Text = row.Cells[4].Value.ToString();
-                txtAcc.Text = row.Cells[5].Value.ToString();
-                txtPass.Text = row.Cells[6].Value.ToString();
+                txtName.Text = row.Cells[1].Value.ToString();
+                txtPass.Text = row.Cells[2].Value.ToString();
+                txtPhone.Text = row.Cells[3].Value.ToString();
+                txtEmail.Text = row.Cells[4].Value.ToString();                
+                txtBal.Text = row.Cells[5].Value.ToString();
+                dateTimePicker1.Text = row.Cells[6].Value.ToString();
             }
             catch (Exception)
             {
@@ -197,6 +215,30 @@ namespace proj1
             }
         }
 
+        
+        public void DisplayData()
+        {
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "Select * from Customers";
+            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
+            DataTable dg = new DataTable();
+            cmd.Fill(dg);
+
+            DGV.DataSource = dg;
+        }
+        
+        private void Customer_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "Select * from Customers";
+            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
+            DataTable dg = new DataTable();
+            cmd.Fill(dg);
+
+            DGV.DataSource = dg;
+        }
         private void txtId_TextChanged(object sender, EventArgs e)
         {
 
@@ -211,5 +253,7 @@ namespace proj1
         {
 
         }
+
+        
     }
 }

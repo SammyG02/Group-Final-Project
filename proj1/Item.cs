@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 
 namespace proj1
@@ -152,6 +153,26 @@ namespace proj1
         private void Item_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                index = e.RowIndex;
+                DataGridViewRow row = datagrid.Rows[index];
+                idtxt.Text = row.Cells[0].Value.ToString();
+                nametxt.Text = row.Cells[1].Value.ToString();
+                quantitytxt.Text = row.Cells[2].Value.ToString();
+                statCombo.Text = row.Cells[3].Value.ToString();
+                
+
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Type MisMatch");
+            }
         }
     }
 }

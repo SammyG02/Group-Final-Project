@@ -201,6 +201,7 @@ namespace proj1
             this.datagrid.RowTemplate.Height = 24;
             this.datagrid.Size = new System.Drawing.Size(657, 206);
             this.datagrid.TabIndex = 14;
+            this.datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellClick);
             // 
             // errorhandler
             // 

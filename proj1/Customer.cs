@@ -90,7 +90,7 @@ namespace proj1
             {
                 try
                 {
-                    CustomerClass cc = new CustomerClass
+                    CustomerClass ins = new CustomerClass
                     {
                         CustomerID = txtId.Text,                        
                         CustomerName = txtName.Text,
@@ -100,7 +100,7 @@ namespace proj1
                         CustomerBal = txtBal.Text,                        
                         CustomerDate = dateTimePicker1.Text,
                     };
-                    cc.InsertData();
+                    ins.InsertData();
                     DisplayData();
                 }
 
@@ -118,7 +118,7 @@ namespace proj1
                        
             try
             {
-                DataGridViewRow upd = DGV.Rows[index];
+                
 
                 var confirmResult = MessageBox.Show("Are you sure to update this row",
                                      "Update the list",
@@ -126,7 +126,7 @@ namespace proj1
                 if (confirmResult == DialogResult.Yes)
                 {
 
-                        CustomerClass cc = new CustomerClass
+                        CustomerClass upd = new CustomerClass
                         {
                             CustomerID = txtId.Text,
                             CustomerName = txtName.Text,
@@ -136,7 +136,7 @@ namespace proj1
                             CustomerBal = txtBal.Text,
                             CustomerDate = dateTimePicker1.Text,
                         };
-                        cc.UpdateData();
+                        upd.UpdateData();
                         DisplayData();                                      
                 }
 
@@ -158,18 +158,12 @@ namespace proj1
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
-            DataGridViewRow del = DGV.Rows[index];
-
-            
-            del.Cells[0].Value = "";
-            del.Cells[1].Value = "";
-            del.Cells[2].Value = "";
-            del.Cells[3].Value = "";
-            del.Cells[4].Value = "";
-            del.Cells[5].Value = "";
-            del.Cells[6].Value = "";
-           
-
+            CustomerClass del = new CustomerClass
+            {
+                CustomerID = txtId.Text,                
+            };
+            del.DeleteData();
+            DisplayData();
         }
 
         

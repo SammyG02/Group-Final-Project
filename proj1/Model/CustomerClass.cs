@@ -80,6 +80,28 @@ namespace proj1.Model
             }
         }
 
+        public void DeleteData()
+        {
+            //Grid
+            custom.Add(this);
+
+            //DBMS
+            try
+            {
+                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                SqlConnection con = new SqlConnection(connectionstring);
+                con.Open();
+                string query = "Delete from Customers where CustomerId = '" + this.CustomerID + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                var result = cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         static public List<CustomerClass> GetAllProducts()
         {
             //Grid

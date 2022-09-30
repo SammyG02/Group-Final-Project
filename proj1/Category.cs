@@ -60,7 +60,7 @@ namespace proj1
                 {
                     CategoryClass cate = new CategoryClass
                     {
-                        CategoryID = int.Parse(txtId.Text),
+                        CategoryID = txtId.Text,
 
                         CategoryName = categoryname.Text,
 
@@ -102,7 +102,8 @@ namespace proj1
                 DataGridViewRow del = DGV.Rows[index];
 
 
-                del.Cells[1].Value = "";
+            del.Cells[0].Value = "";
+            del.Cells[1].Value = "";
                
 
             }

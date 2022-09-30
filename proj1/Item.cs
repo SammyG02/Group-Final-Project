@@ -16,7 +16,7 @@ namespace proj1
     public partial class Item : Form
     {
         int index;
-        string catagoryinput = "temp";
+        //string catagoryinput = "temp";
        
         public Item()
         {
@@ -71,15 +71,15 @@ namespace proj1
                 {
                     itemclass cate = new itemclass
                     {
-                        ID = int.Parse(idtxt.Text),
+                        ID = idtxt.Text,
 
                         Item_Name = nametxt.Text,
 
-                        Quntity = int.Parse(quantitytxt.Text),
+                        Quntity = quantitytxt.Text,
 
-                        Status = statchk.Checked,
+                        Status = statCombo.Text,
 
-                        Catagory = catagoryinput,
+                        //Catagory = catagoryinput,
 
                     };
                     cate.Saved();
@@ -110,8 +110,8 @@ namespace proj1
                     upd.Cells[0].Value = idtxt.Text;
                     upd.Cells[1].Value = nametxt.Text;
                     upd.Cells[2].Value = quantitytxt.Text;
-                    upd.Cells[3].Value = statchk.Checked;
-                    upd.Cells[4].Value = catagoryinput;
+                    upd.Cells[3].Value = statCombo.Text;
+                    //upd.Cells[4].Value = catagoryinput;
                 }
 
                 else
@@ -130,16 +130,14 @@ namespace proj1
         {
             DataGridViewRow del = datagrid.Rows[index];
 
-            var confirmResult = MessageBox.Show("Are you sure to remove this row", "Update the list", MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
-            {
-                del.Cells[0].Value = null;
-                del.Cells[1].Value = "";
-                del.Cells[2].Value = null;
-                del.Cells[3].Value = null;
-                del.Cells[4].Value = "";
-            }
-           
+
+            del.Cells[0].Value = "";
+            del.Cells[1].Value = "";
+            del.Cells[2].Value = "";
+            del.Cells[3].Value = "";
+            //del.Cells[4].Value = "";
+            
+
         }
 
         private void ousbtn_Click(object sender, EventArgs e)
@@ -147,7 +145,7 @@ namespace proj1
 
             DataGridViewRow del = datagrid.Rows[index];
             
-            del.Cells[3].Value = false;
+            del.Cells[3].Value = "";
            
         }
 

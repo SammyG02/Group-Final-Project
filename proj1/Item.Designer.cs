@@ -56,7 +56,7 @@ namespace proj1
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label1.Location = new System.Drawing.Point(34, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 30);
+            this.label1.Size = new System.Drawing.Size(93, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
@@ -67,7 +67,7 @@ namespace proj1
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label2.Location = new System.Drawing.Point(262, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 30);
+            this.label2.Size = new System.Drawing.Size(46, 37);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID";
             // 
@@ -78,7 +78,7 @@ namespace proj1
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label3.Location = new System.Drawing.Point(510, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 30);
+            this.label3.Size = new System.Drawing.Size(96, 37);
             this.label3.TabIndex = 2;
             this.label3.Text = "Status";
             // 
@@ -89,7 +89,7 @@ namespace proj1
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label4.Location = new System.Drawing.Point(291, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 27);
+            this.label4.Size = new System.Drawing.Size(96, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "ITEMS";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -101,7 +101,7 @@ namespace proj1
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label5.Location = new System.Drawing.Point(34, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 30);
+            this.label5.Size = new System.Drawing.Size(129, 37);
             this.label5.TabIndex = 4;
             this.label5.Text = "Quantity";
             // 
@@ -112,7 +112,7 @@ namespace proj1
             this.nametxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nametxt.Location = new System.Drawing.Point(37, 96);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(182, 19);
+            this.nametxt.Size = new System.Drawing.Size(182, 22);
             this.nametxt.TabIndex = 6;
             // 
             // idtxt
@@ -122,7 +122,7 @@ namespace proj1
             this.idtxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idtxt.Location = new System.Drawing.Point(267, 127);
             this.idtxt.Name = "idtxt";
-            this.idtxt.Size = new System.Drawing.Size(182, 19);
+            this.idtxt.Size = new System.Drawing.Size(182, 22);
             this.idtxt.TabIndex = 7;
             // 
             // quantitytxt
@@ -132,7 +132,7 @@ namespace proj1
             this.quantitytxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantitytxt.Location = new System.Drawing.Point(39, 170);
             this.quantitytxt.Name = "quantitytxt";
-            this.quantitytxt.Size = new System.Drawing.Size(182, 19);
+            this.quantitytxt.Size = new System.Drawing.Size(182, 22);
             this.quantitytxt.TabIndex = 8;
             // 
             // statchk
@@ -143,9 +143,9 @@ namespace proj1
             this.statchk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.statchk.Font = new System.Drawing.Font("Arial", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statchk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.statchk.Location = new System.Drawing.Point(515, 123);
+            this.statchk.Location = new System.Drawing.Point(526, 123);
             this.statchk.Name = "statchk";
-            this.statchk.Size = new System.Drawing.Size(61, 23);
+            this.statchk.Size = new System.Drawing.Size(68, 26);
             this.statchk.TabIndex = 9;
             this.statchk.Text = "In Stock";
             this.statchk.UseVisualStyleBackColor = false;
@@ -216,6 +216,8 @@ namespace proj1
             this.datagrid.RowTemplate.Height = 24;
             this.datagrid.Size = new System.Drawing.Size(657, 206);
             this.datagrid.TabIndex = 14;
+            this.datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellClick);
+            this.datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
             // 
             // errorhandler
             // 
@@ -223,7 +225,7 @@ namespace proj1
             // 
             // Item
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(677, 530);

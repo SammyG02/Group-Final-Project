@@ -11,10 +11,10 @@ namespace proj1
 
         static private List<itemclass> cat = new List<itemclass>();
 
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string Item_Name { get; set; }
-        public int Quntity { get; set; }
-        public bool Status { get; set; }
+        public string Quntity { get; set; }
+        public string Status { get; set; }
         public string Catagory { get; set; }
 
         public void Saved()

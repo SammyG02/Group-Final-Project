@@ -71,13 +71,13 @@ namespace proj1
                 {
                     itemclass cate = new itemclass
                     {
-                        ID = int.Parse(idtxt.Text),
+                        ID = idtxt.Text,
 
                         Item_Name = nametxt.Text,
 
-                        Quntity = int.Parse(quantitytxt.Text),
+                        Quntity = quantitytxt.Text,
 
-                        Status = statchk.Checked,
+                        Status = "true",
 
                         Catagory = catagoryinput,
 
@@ -107,10 +107,10 @@ namespace proj1
                 {
 
 
-                    upd.Cells[0].Value = idtxt.Text;
+                    upd.Cells[0].Value = int.Parse(idtxt.Text);
                     upd.Cells[1].Value = nametxt.Text;
-                    upd.Cells[2].Value = quantitytxt.Text;
-                    upd.Cells[3].Value = statchk.Checked;
+                    upd.Cells[2].Value = int.Parse(quantitytxt.Text);
+                    upd.Cells[3].Value = statchk.Checked.ToString();
                     upd.Cells[4].Value = catagoryinput;
                 }
 
@@ -154,6 +154,29 @@ namespace proj1
         private void Item_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                index = e.RowIndex;
+                DataGridViewRow row = datagrid.Rows[index];
+                idtxt.Text = row.Cells[0].Value.ToString();
+                nametxt.Text = row.Cells[1].Value.ToString();
+                quantitytxt.Text = row.Cells[2].Value.ToString();
+                statchk.Text = row.Cells[3].Value.ToString();
+                catagoryinput = row.Cells[4].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Type MisMatch");
+            }
         }
     }
 }

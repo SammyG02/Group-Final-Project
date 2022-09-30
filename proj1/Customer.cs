@@ -52,6 +52,10 @@ namespace proj1
             {
                 errorP.SetError(txtAcc, "Account is needed");
             }
+            else if (string.IsNullOrEmpty(txtPass.Text))
+            {
+                errorP.SetError(txtPass, "Account is needed");
+            }
 
             else if (!checkId.IsMatch(txtId.Text))
             {
@@ -87,6 +91,7 @@ namespace proj1
                         CustomerEmail = txtEmail.Text,
                         CustomerPhone = txtPhone.Text,
                         CustomerAcc = txtAcc.Text,
+                        CustomerPass = txtPass.Text,
                     };
                     cc.Saved();
                     DGV.DataSource = null;
@@ -120,6 +125,7 @@ namespace proj1
                         upd.Cells[3].Value = txtEmail.Text;
                         upd.Cells[4].Value = txtPhone.Text;
                         upd.Cells[5].Value = txtAcc.Text;
+                        upd.Cells[6].Value = txtPass.Text;
                 }
 
                 else
@@ -146,6 +152,7 @@ namespace proj1
             del.Cells[3].Value = "";
             del.Cells[4].Value = "";
             del.Cells[5].Value = "";
+            del.Cells[6].Value = "";
            
 
         }
@@ -163,6 +170,7 @@ namespace proj1
                 txtEmail.Text = "";
                 txtPhone.Text = "";
                 txtAcc.Text = "";
+                txtPass.Text = "";
             }
              
             else { }
@@ -181,6 +189,7 @@ namespace proj1
                 txtEmail.Text = row.Cells[3].Value.ToString();
                 txtPhone.Text = row.Cells[4].Value.ToString();
                 txtAcc.Text = row.Cells[5].Value.ToString();
+                txtPass.Text = row.Cells[6].Value.ToString();
             }
             catch (Exception)
             {

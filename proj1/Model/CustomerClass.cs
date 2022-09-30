@@ -21,6 +21,8 @@ namespace proj1.Model
         public string CustomerEmail { get; set; }
         public string CustomerPhone { get; set; }
         public string CustomerAcc { get; set; }
+        public string CustomerPass { get; set; }
+
 
 
 

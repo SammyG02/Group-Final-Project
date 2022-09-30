@@ -164,10 +164,7 @@ namespace proj1
                 idtxt.Text = row.Cells[0].Value.ToString();
                 nametxt.Text = row.Cells[1].Value.ToString();
                 quantitytxt.Text = row.Cells[2].Value.ToString();
-                statCombo.Text = row.Cells[3].Value.ToString();
-                
-
-                
+                statCombo.Text = row.Cells[3].Value.ToString();   
             }
             catch (Exception)
             {

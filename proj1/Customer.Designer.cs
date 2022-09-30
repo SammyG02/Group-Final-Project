@@ -47,6 +47,8 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtAcc = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
@@ -128,7 +130,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(12, 87);
+            this.label2.Location = new System.Drawing.Point(12, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 37);
             this.label2.TabIndex = 5;
@@ -158,10 +160,10 @@
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtName.Location = new System.Drawing.Point(128, 101);
+            this.txtName.Location = new System.Drawing.Point(128, 81);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(588, 22);
+            this.txtName.Size = new System.Drawing.Size(269, 22);
             this.txtName.TabIndex = 11;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
@@ -170,13 +172,14 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(523, 23);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(365, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(246, 22);
             this.dateTimePicker1.TabIndex = 14;
             // 
             // DGV
             // 
             this.DGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGV.Location = new System.Drawing.Point(12, 254);
             this.DGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGV.Name = "DGV";
@@ -196,7 +199,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label6.Location = new System.Drawing.Point(12, 142);
+            this.label6.Location = new System.Drawing.Point(12, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 37);
             this.label6.TabIndex = 16;
@@ -207,7 +210,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label7.Location = new System.Drawing.Point(12, 204);
+            this.label7.Location = new System.Drawing.Point(7, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 37);
             this.label7.TabIndex = 17;
@@ -220,23 +223,23 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label8.Location = new System.Drawing.Point(439, 204);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 37);
+            this.label8.Size = new System.Drawing.Size(116, 37);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Amount";
+            this.label8.Text = "Balance";
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtEmail.Location = new System.Drawing.Point(128, 156);
+            this.txtEmail.Location = new System.Drawing.Point(128, 130);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(588, 22);
+            this.txtEmail.Size = new System.Drawing.Size(308, 22);
             this.txtEmail.TabIndex = 19;
             // 
             // txtPhone
             // 
             this.txtPhone.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtPhone.Location = new System.Drawing.Point(116, 218);
+            this.txtPhone.Location = new System.Drawing.Point(111, 217);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(261, 22);
@@ -251,12 +254,34 @@
             this.txtAcc.Size = new System.Drawing.Size(261, 22);
             this.txtAcc.TabIndex = 21;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label4.Location = new System.Drawing.Point(439, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(139, 37);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Password";
+            // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtPass.Location = new System.Drawing.Point(584, 81);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(261, 22);
+            this.txtPass.TabIndex = 23;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(900, 640);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAcc);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtEmail);
@@ -306,5 +331,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label4;
     }
 }

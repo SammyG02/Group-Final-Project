@@ -220,9 +220,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label8.Location = new System.Drawing.Point(439, 204);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 37);
+            this.label8.Size = new System.Drawing.Size(121, 37);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Account";
+            this.label8.Text = "Amount";
             // 
             // txtEmail
             // 

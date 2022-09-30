@@ -128,3 +128,6 @@ C:\Users\Samuel\Desktop\Group-Final-Project\proj1\obj\Debug\proj1.csproj.CoreCom
 C:\Users\Samuel\Desktop\Group-Final-Project\proj1\obj\Debug\proj1.exe
 C:\Users\Samuel\Desktop\Group-Final-Project\proj1\obj\Debug\proj1.pdb
 C:\Users\Samuel\Desktop\Group-Final-Project\proj1\obj\Debug\proj1.SellingPlace.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.Category.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.Item.resources
+C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.SellingPlace.resources

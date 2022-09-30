@@ -81,7 +81,7 @@ namespace proj1
                 {
                     CustomerClass cc = new CustomerClass
                     {
-                        CustomerID = int.Parse(txtId.Text),
+                        CustomerID = txtId.Text,
                         CustomerDate = dateTimePicker1.Text,
                         CustomerName = txtName.Text,
                         CustomerEmail = txtEmail.Text,
@@ -140,6 +140,7 @@ namespace proj1
             DataGridViewRow del = DGV.Rows[index];
 
             
+            del.Cells[0].Value = "";
             del.Cells[1].Value = "";
             del.Cells[2].Value = "";
             del.Cells[3].Value = "";

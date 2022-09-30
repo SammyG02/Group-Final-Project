@@ -74,7 +74,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(308, 78);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Contact Us";
+            this.button1.Text = "Contact";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btnSettings

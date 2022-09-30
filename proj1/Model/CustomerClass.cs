@@ -15,7 +15,7 @@ namespace proj1.Model
     {
         static private List<CustomerClass> custom = new List<CustomerClass>();
       
-        public int CustomerID { get; set; }
+        public string CustomerID { get; set; }
         public string CustomerDate { get; set; }
         public string CustomerName { get; set; }
         public string CustomerEmail { get; set; }

@@ -59,7 +59,7 @@
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtId.Location = new System.Drawing.Point(20, 103);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(243, 22);
             this.txtId.TabIndex = 1;
@@ -81,13 +81,14 @@
             // 
             this.categoryname.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.categoryname.Location = new System.Drawing.Point(305, 103);
-            this.categoryname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.categoryname.Margin = new System.Windows.Forms.Padding(4);
             this.categoryname.Name = "categoryname";
             this.categoryname.Size = new System.Drawing.Size(304, 22);
             this.categoryname.TabIndex = 3;
             // 
             // DGV
             // 
+            this.DGV.AllowUserToOrderColumns = true;
             this.DGV.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV.Location = new System.Drawing.Point(9, 203);
@@ -106,7 +107,7 @@
             this.Addbtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.Addbtn.Location = new System.Drawing.Point(13, 504);
-            this.Addbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Addbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(200, 72);
             this.Addbtn.TabIndex = 5;
@@ -121,7 +122,7 @@
             this.updatebtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.updatebtn.Location = new System.Drawing.Point(233, 504);
-            this.updatebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updatebtn.Margin = new System.Windows.Forms.Padding(4);
             this.updatebtn.Name = "updatebtn";
             this.updatebtn.Size = new System.Drawing.Size(200, 72);
             this.updatebtn.TabIndex = 6;
@@ -136,7 +137,7 @@
             this.Deletbtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.Deletbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.Deletbtn.Location = new System.Drawing.Point(453, 504);
-            this.Deletbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Deletbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Deletbtn.Name = "Deletbtn";
             this.Deletbtn.Size = new System.Drawing.Size(200, 72);
             this.Deletbtn.TabIndex = 7;
@@ -151,7 +152,7 @@
             this.Clearbtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.Clearbtn.Location = new System.Drawing.Point(677, 504);
-            this.Clearbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Clearbtn.Name = "Clearbtn";
             this.Clearbtn.Size = new System.Drawing.Size(200, 72);
             this.Clearbtn.TabIndex = 8;
@@ -179,7 +180,7 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Category";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category";

@@ -10,7 +10,7 @@ namespace proj1
     {
         static private List<CategoryClass> cat = new List<CategoryClass>();
 
-        public int CategoryID { get; set; }
+        public string CategoryID { get; set; }
         public string CategoryName { get; set; }
         
     public void Saved()

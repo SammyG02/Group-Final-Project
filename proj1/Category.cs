@@ -101,7 +101,7 @@ namespace proj1
                 else { }
             }
                
-                    //DeleteButton
+              //DeleteButton
             private void Deletbtn_Click(object sender, EventArgs e)
             {
             CategoryClass del = new CategoryClass
@@ -191,6 +191,11 @@ namespace proj1
             cmd.Fill(dg);
 
             DGV.DataSource = dg;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

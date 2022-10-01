@@ -154,7 +154,7 @@ namespace proj1
 
         }
         
-        //Update Button
+        //Delete Button
         private void btnDelete_Click(object sender, EventArgs e)
         {
 

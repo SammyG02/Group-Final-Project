@@ -131,3 +131,5 @@ C:\Users\Samuel\Desktop\Group-Final-Project\proj1\obj\Debug\proj1.SellingPlace.r
 C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.Category.resources
 C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.Item.resources
 C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.SellingPlace.resources
+C:\Users\darkb\OneDrive\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.Item.resources
+C:\Users\darkb\OneDrive\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.SellingPlace.resources

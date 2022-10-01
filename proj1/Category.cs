@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace proj1
 {
@@ -16,6 +17,7 @@ namespace proj1
     {
 
         int index;
+        string connectionstring = @"Data Source = LAPTOP-1M9P6SFG\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
         public Category()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace proj1
 
         }
 
+        //AddButton
         private void button1_Click(object sender, EventArgs e)
         {
             errorP.Clear();
@@ -65,9 +68,9 @@ namespace proj1
                         CategoryName = categoryname.Text,
 
                     };
-                    cate.Saved();
-                    DGV.DataSource = null;
-                    DGV.DataSource = CategoryClass.GetAllProducts();
+                    cate.InsertData();
+                    DisplayData();
+                    
                 }
 
                 catch (Exception)
@@ -81,7 +84,8 @@ namespace proj1
             {
 
             }
-
+              
+               //ClearButton
             private void Clearbtn_Click(object sender, EventArgs e)
             {
                var confirmResult = MessageBox.Show("Are you sure to Clear the Textbox",
@@ -96,17 +100,19 @@ namespace proj1
 
                 else { }
             }
-
+               
+                    //DeleteButton
             private void Deletbtn_Click(object sender, EventArgs e)
             {
-                DataGridViewRow del = DGV.Rows[index];
+            CategoryClass del = new CategoryClass
+            {
+                CategoryID = txtId.Text,
+            };
+            del.DeleteData();
+            DisplayData();
 
 
-            del.Cells[0].Value = "";
-            del.Cells[1].Value = "";
-               
-
-            }
+        }
 
         private void DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -124,11 +130,15 @@ namespace proj1
             }
         }
 
+       
+
+        
+            //UpdateButton
         private void Updatebtn_Click(object sender, EventArgs e)
         {
             try
             {
-                DataGridViewRow upd = DGV.Rows[index];
+
 
                 var confirmResult = MessageBox.Show("Are you sure to update this row",
                                      "Update the list",
@@ -136,11 +146,16 @@ namespace proj1
                 if (confirmResult == DialogResult.Yes)
                 {
 
-
-                    upd.Cells[0].Value = txtId.Text;
-                    upd.Cells[1].Value = categoryname.Text;
-                    
+                    CategoryClass upd = new CategoryClass
+                    {
+                        CategoryID = txtId.Text,
+                        CategoryName = categoryname.Text,
+                        
+                    };
+                    upd.UpdateData();
+                    DisplayData();
                 }
+
 
                 else
                 {
@@ -152,6 +167,30 @@ namespace proj1
             {
                 MessageBox.Show("User can't Update without adding something");
             }
+        }
+
+        public void DisplayData()
+        {
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "select * from Category";
+            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
+            DataTable dg = new DataTable();
+            cmd.Fill(dg);
+
+            DGV.DataSource = dg;
+        }
+
+        private void Category_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "Select * from Category";
+            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
+            DataTable dg = new DataTable();
+            cmd.Fill(dg);
+
+            DGV.DataSource = dg;
         }
     }
     }

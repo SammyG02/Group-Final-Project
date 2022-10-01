@@ -114,6 +114,7 @@ namespace proj1
 
         }
 
+              //DataGridView
         private void DGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            try
@@ -168,7 +169,7 @@ namespace proj1
                 MessageBox.Show("User can't Update without adding something");
             }
         }
-
+            
         public void DisplayData()
         {
             SqlConnection con = new SqlConnection(connectionstring);

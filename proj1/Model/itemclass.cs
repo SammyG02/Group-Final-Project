@@ -32,7 +32,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = BATCOMPUTER\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "insert into Items values('" + this.ID + "', '" + this.Item_Name + "', " +
@@ -51,7 +51,7 @@ namespace proj1
 
         static public List<itemclass> GetAllProducts()
         {
-            return cat;
+            return item;
         }
     }
 }

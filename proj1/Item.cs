@@ -17,7 +17,7 @@ namespace proj1
     {
         int index;
         //string catagoryinput = "temp";
-        string connectionstring = @"Data Source = BATCOMPUTER\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Item()
         {
@@ -33,7 +33,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select * from Customers";
+            string query = "Select * from Items";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
@@ -80,20 +80,20 @@ namespace proj1
             {
                 try
                 {
-                    itemclass cate = new itemclass
+                    itemclass item = new itemclass
                     {
                         ID = idtxt.Text,
 
                         Item_Name = nametxt.Text,
 
-                        Quntity = quantitytxt.Text,
+                        Quantity = quantitytxt.Text,
 
-                        Status = statCombo.Text,
+                        //Status = statCombo.Text,
 
                         //Catagory = catagoryinput,
 
                     };
-                    cate.Saved();
+                    item.InsertData();
                     datagrid.DataSource = null;
                     datagrid.DataSource = itemclass.GetAllProducts();
                 }

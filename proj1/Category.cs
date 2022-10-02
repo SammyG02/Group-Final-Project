@@ -17,7 +17,7 @@ namespace proj1
     {
 
         int index;
-        string connectionstring = @"Data Source = LAPTOP-1M9P6SFG\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
         public Category()
         {
             InitializeComponent();

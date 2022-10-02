@@ -27,7 +27,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source=  LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source=  BATCOMPUTER\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "insert into Category values('" + this.CategoryID + "', '" + this.CategoryName + "')";
@@ -49,7 +49,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = BATCOMPUTER\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "update Category set CategoryName = '" + this.CategoryName + "' where CategoryID = '" + this.CategoryID + "'";
@@ -71,7 +71,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = BATCOMPUTER\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Delete from Category where CategoryID = '" + this.CategoryID + "'";
@@ -95,7 +95,7 @@ namespace proj1
             List<CategoryClass> finalp = new List<CategoryClass>();
             try
             {
-                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = BATCOMPUTER\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Select * from Category";

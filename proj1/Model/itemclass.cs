@@ -19,9 +19,9 @@ namespace proj1
         public string ID { get; set; }
         public string Item_Name { get; set; }
         public string Quantity { get; set; }
-        public int Price { get; set; }
-        public bool Status { get; set; }
-        public int CatagoryID { get; set; }
+        public string Price { get; set; }
+        public string Status { get; set; }
+        public string CatagoryID { get; set; }
 
         //public string Catagory { get; set; }
 
@@ -32,7 +32,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = BATCOMPUTER\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "insert into Items values('" + this.ID + "', '" + this.Item_Name + "', " +

@@ -44,7 +44,9 @@ namespace proj1
             this.ousbtn = new System.Windows.Forms.Button();
             this.datagrid = new System.Windows.Forms.DataGridView();
             this.errorhandler = new System.Windows.Forms.ErrorProvider(this.components);
-            this.statCombo = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pricetxt = new System.Windows.Forms.TextBox();
+            this.status = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorhandler)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +67,7 @@ namespace proj1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(262, 84);
+            this.label2.Location = new System.Drawing.Point(272, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 37);
             this.label2.TabIndex = 1;
@@ -76,7 +78,7 @@ namespace proj1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(510, 84);
+            this.label3.Location = new System.Drawing.Point(510, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 37);
             this.label3.TabIndex = 2;
@@ -89,7 +91,7 @@ namespace proj1
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.label4.Location = new System.Drawing.Point(291, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 32);
+            this.label4.Size = new System.Drawing.Size(98, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "ITEMS";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -120,7 +122,7 @@ namespace proj1
             this.idtxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.idtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idtxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idtxt.Location = new System.Drawing.Point(267, 127);
+            this.idtxt.Location = new System.Drawing.Point(279, 99);
             this.idtxt.Name = "idtxt";
             this.idtxt.Size = new System.Drawing.Size(182, 22);
             this.idtxt.TabIndex = 7;
@@ -207,16 +209,36 @@ namespace proj1
             // 
             this.errorhandler.ContainerControl = this;
             // 
-            // statCombo
+            // label6
             // 
-            this.statCombo.FormattingEnabled = true;
-            this.statCombo.Items.AddRange(new object[] {
-            "In Stock",
-            "Out Of Stock"});
-            this.statCombo.Location = new System.Drawing.Point(517, 124);
-            this.statCombo.Name = "statCombo";
-            this.statCombo.Size = new System.Drawing.Size(121, 23);
-            this.statCombo.TabIndex = 15;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label6.Location = new System.Drawing.Point(272, 131);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 37);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Price";
+            // 
+            // pricetxt
+            // 
+            this.pricetxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pricetxt.Location = new System.Drawing.Point(279, 171);
+            this.pricetxt.Name = "pricetxt";
+            this.pricetxt.Size = new System.Drawing.Size(182, 21);
+            this.pricetxt.TabIndex = 16;
+            // 
+            // status
+            // 
+            this.status.AutoSize = true;
+            this.status.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.status.Location = new System.Drawing.Point(515, 100);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(84, 23);
+            this.status.TabIndex = 17;
+            this.status.Text = "In Stock";
+            this.status.UseVisualStyleBackColor = true;
             // 
             // Item
             // 
@@ -224,7 +246,9 @@ namespace proj1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(677, 530);
-            this.Controls.Add(this.statCombo);
+            this.Controls.Add(this.status);
+            this.Controls.Add(this.pricetxt);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.datagrid);
             this.Controls.Add(this.ousbtn);
             this.Controls.Add(this.removebtn);
@@ -267,6 +291,8 @@ namespace proj1
         private System.Windows.Forms.Button ousbtn;
         private System.Windows.Forms.DataGridView datagrid;
         private System.Windows.Forms.ErrorProvider errorhandler;
-        private System.Windows.Forms.ComboBox statCombo;
+        private System.Windows.Forms.TextBox pricetxt;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox status;
     }
 }

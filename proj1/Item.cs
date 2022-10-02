@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using System.Xml.Linq;
-
+using System.Data.SqlClient;
 
 namespace proj1
 {
@@ -18,7 +17,8 @@ namespace proj1
     {
         int index;
         //string catagoryinput = "temp";
-       
+        string connectionstring = @"Data Source = BATCOMPUTER\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+
         public Item()
         {
             InitializeComponent();
@@ -29,7 +29,17 @@ namespace proj1
 
         }
 
-        
+        public void DisplayData()
+        {
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "Select * from Customers";
+            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
+            DataTable dg = new DataTable();
+            cmd.Fill(dg);
+
+            datagrid.DataSource = dg;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

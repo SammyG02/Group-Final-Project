@@ -16,13 +16,43 @@ namespace proj1
     public partial class Item : Form
     {
         int index;
-        int tempcat = 1;
+        
         //string catagoryinput = "temp";
         string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Item()
         {
             InitializeComponent();
+            fillCombo();
+        }
+
+         void fillCombo()
+        {
+            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                SqlConnection con = new SqlConnection(connectionstring);
+                con.Open();
+            string query = "select categoryName from Category";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader myReader;  
+                myReader = cmd.ExecuteReader();
+
+            try
+            {
+                while (myReader.Read())
+                {
+                    String cateName = myReader.GetString(myReader.GetOrdinal("categoryName"));
+                    //String cateId = myReader.GetInt32(myReader.GetOrdinal("categoryId")).ToString();
+                    //int catId = Int32.Parse(cateId);
+
+                    catrgoryCb.Items.Add(cateName);
+
+                }
+                con.Close(); 
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -34,13 +64,15 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select * from Items";
+            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,itemStatus as Status,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
 
             datagrid.DataSource = dg;
         }
+
+        //add button click
         private void button1_Click(object sender, EventArgs e)
         {
             errorhandler.Clear();
@@ -88,6 +120,12 @@ namespace proj1
             {
                 try
                 {
+                    String CategoryName = catrgoryCb.SelectedItem.ToString();
+                    SqlConnection con = new SqlConnection(connectionstring);
+                    con.Open();
+                    string query = "Select categoryId from Category where categoryName = '"+CategoryName+"'";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    Int32 categoryIdValue = Convert.ToInt32(cmd.ExecuteScalar());
                     itemclass item = new itemclass
                     {
                         itemID = idtxt.Text,
@@ -100,8 +138,11 @@ namespace proj1
                         //needs a real value 
 
                         Price = pricetxt.Text,
+                        CategoryID = categoryIdValue,
 
-                        CatagoryID = "1",
+
+
+
                         //needs a real value 
 
                     };
@@ -129,6 +170,12 @@ namespace proj1
                                      MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
                 {
+                    String CategoryName = catrgoryCb.SelectedItem.ToString();
+                    SqlConnection con = new SqlConnection(connectionstring);
+                    con.Open();
+                    string query = "Select categoryId from Category where categoryName = '" + CategoryName + "'";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    Int32 categoryIdValue = Convert.ToInt32(cmd.ExecuteScalar());
 
                     itemclass upd = new itemclass
                     {
@@ -143,7 +190,7 @@ namespace proj1
 
                         Price = pricetxt.Text,
 
-                        CatagoryID = "1",
+                        CategoryID = categoryIdValue,
                         //needs a real value 
 
                     };
@@ -193,7 +240,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select * from Items";
+            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,itemStatus as Status,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);

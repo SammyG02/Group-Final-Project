@@ -47,7 +47,7 @@ namespace proj1
             this.label6 = new System.Windows.Forms.Label();
             this.pricetxt = new System.Windows.Forms.TextBox();
             this.status = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.catrgoryCb = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorhandler)).BeginInit();
@@ -58,7 +58,7 @@ namespace proj1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(306, 67);
+            this.label1.Location = new System.Drawing.Point(272, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 37);
             this.label1.TabIndex = 0;
@@ -69,7 +69,7 @@ namespace proj1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(38, 80);
+            this.label2.Location = new System.Drawing.Point(34, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 37);
             this.label2.TabIndex = 1;
@@ -80,7 +80,7 @@ namespace proj1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(583, 12);
+            this.label3.Location = new System.Drawing.Point(518, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 37);
             this.label3.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace proj1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Black", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(327, 12);
+            this.label4.Location = new System.Drawing.Point(291, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 32);
             this.label4.TabIndex = 3;
@@ -103,7 +103,7 @@ namespace proj1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(38, 169);
+            this.label5.Location = new System.Drawing.Point(34, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 37);
             this.label5.TabIndex = 4;
@@ -114,10 +114,10 @@ namespace proj1
             this.nametxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.nametxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nametxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nametxt.Location = new System.Drawing.Point(314, 133);
+            this.nametxt.Location = new System.Drawing.Point(279, 114);
             this.nametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(204, 22);
+            this.nametxt.Size = new System.Drawing.Size(182, 22);
             this.nametxt.TabIndex = 6;
             // 
             // idtxt
@@ -125,10 +125,10 @@ namespace proj1
             this.idtxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.idtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idtxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idtxt.Location = new System.Drawing.Point(44, 136);
+            this.idtxt.Location = new System.Drawing.Point(39, 115);
             this.idtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.idtxt.Name = "idtxt";
-            this.idtxt.Size = new System.Drawing.Size(204, 22);
+            this.idtxt.Size = new System.Drawing.Size(182, 22);
             this.idtxt.TabIndex = 7;
             // 
             // quantitytxt
@@ -136,10 +136,10 @@ namespace proj1
             this.quantitytxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.quantitytxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.quantitytxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantitytxt.Location = new System.Drawing.Point(44, 227);
+            this.quantitytxt.Location = new System.Drawing.Point(39, 192);
             this.quantitytxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.quantitytxt.Name = "quantitytxt";
-            this.quantitytxt.Size = new System.Drawing.Size(204, 22);
+            this.quantitytxt.Size = new System.Drawing.Size(182, 22);
             this.quantitytxt.TabIndex = 8;
             // 
             // addbtn
@@ -148,10 +148,10 @@ namespace proj1
             this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addbtn.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.addbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.addbtn.Location = new System.Drawing.Point(10, 568);
+            this.addbtn.Location = new System.Drawing.Point(9, 482);
             this.addbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(170, 68);
+            this.addbtn.Size = new System.Drawing.Size(151, 57);
             this.addbtn.TabIndex = 10;
             this.addbtn.Text = "Add";
             this.addbtn.UseVisualStyleBackColor = false;
@@ -163,10 +163,10 @@ namespace proj1
             this.updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.updatebtn.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.updatebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.updatebtn.Location = new System.Drawing.Point(198, 568);
+            this.updatebtn.Location = new System.Drawing.Point(176, 482);
             this.updatebtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(170, 68);
+            this.updatebtn.Size = new System.Drawing.Size(151, 57);
             this.updatebtn.TabIndex = 11;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = false;
@@ -178,10 +178,10 @@ namespace proj1
             this.removebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.removebtn.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.removebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.removebtn.Location = new System.Drawing.Point(389, 568);
+            this.removebtn.Location = new System.Drawing.Point(346, 482);
             this.removebtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.removebtn.Name = "removebtn";
-            this.removebtn.Size = new System.Drawing.Size(170, 68);
+            this.removebtn.Size = new System.Drawing.Size(151, 57);
             this.removebtn.TabIndex = 12;
             this.removebtn.Text = "Delete";
             this.removebtn.UseVisualStyleBackColor = false;
@@ -193,10 +193,10 @@ namespace proj1
             this.ousbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ousbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ousbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.ousbtn.Location = new System.Drawing.Point(579, 568);
+            this.ousbtn.Location = new System.Drawing.Point(515, 482);
             this.ousbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ousbtn.Name = "ousbtn";
-            this.ousbtn.Size = new System.Drawing.Size(170, 68);
+            this.ousbtn.Size = new System.Drawing.Size(151, 57);
             this.ousbtn.TabIndex = 13;
             this.ousbtn.Text = "No Stock";
             this.ousbtn.UseVisualStyleBackColor = false;
@@ -206,12 +206,12 @@ namespace proj1
             // 
             this.datagrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid.Location = new System.Drawing.Point(10, 275);
+            this.datagrid.Location = new System.Drawing.Point(9, 234);
             this.datagrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.datagrid.Name = "datagrid";
             this.datagrid.RowHeadersWidth = 51;
             this.datagrid.RowTemplate.Height = 24;
-            this.datagrid.Size = new System.Drawing.Size(739, 275);
+            this.datagrid.Size = new System.Drawing.Size(657, 234);
             this.datagrid.TabIndex = 14;
             this.datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellClick);
             this.datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_CellContentClick);
@@ -225,7 +225,7 @@ namespace proj1
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label6.Location = new System.Drawing.Point(306, 175);
+            this.label6.Location = new System.Drawing.Point(272, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 37);
             this.label6.TabIndex = 15;
@@ -234,10 +234,10 @@ namespace proj1
             // pricetxt
             // 
             this.pricetxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pricetxt.Location = new System.Drawing.Point(314, 228);
+            this.pricetxt.Location = new System.Drawing.Point(279, 193);
             this.pricetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pricetxt.Name = "pricetxt";
-            this.pricetxt.Size = new System.Drawing.Size(204, 26);
+            this.pricetxt.Size = new System.Drawing.Size(182, 23);
             this.pricetxt.TabIndex = 16;
             // 
             // status
@@ -245,7 +245,7 @@ namespace proj1
             this.status.AutoSize = true;
             this.status.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.status.Location = new System.Drawing.Point(591, 67);
+            this.status.Location = new System.Drawing.Point(525, 56);
             this.status.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(79, 21);
@@ -253,25 +253,21 @@ namespace proj1
             this.status.Text = "In Stock";
             this.status.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // catrgoryCb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cate1",
-            "Cate2",
-            "Cate3"});
-            this.comboBox1.Location = new System.Drawing.Point(591, 152);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 28);
-            this.comboBox1.TabIndex = 18;
+            this.catrgoryCb.FormattingEnabled = true;
+            this.catrgoryCb.Location = new System.Drawing.Point(525, 119);
+            this.catrgoryCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.catrgoryCb.Name = "catrgoryCb";
+            this.catrgoryCb.Size = new System.Drawing.Size(121, 25);
+            this.catrgoryCb.TabIndex = 18;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label7.Location = new System.Drawing.Point(583, 99);
+            this.label7.Location = new System.Drawing.Point(518, 84);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 37);
             this.label7.TabIndex = 19;
@@ -279,12 +275,12 @@ namespace proj1
             // 
             // Item
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(762, 707);
+            this.ClientSize = new System.Drawing.Size(677, 600);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.catrgoryCb);
             this.Controls.Add(this.status);
             this.Controls.Add(this.pricetxt);
             this.Controls.Add(this.label6);
@@ -301,7 +297,7 @@ namespace proj1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.4F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Item";
@@ -335,6 +331,6 @@ namespace proj1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox status;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox catrgoryCb;
     }
 }

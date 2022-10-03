@@ -21,10 +21,25 @@ namespace proj1
         public string Quantity { get; set; }
         public string Price { get; set; }
         public string Status { get; set; }
-        public string CatagoryID { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
 
-        //public string Catagory { get; set; }
 
+
+
+
+
+        public void getCatId(String categoryName)
+        {
+            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "select categoryId from Category where CategoryName = '"+categoryName+"'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader readId = cmd.ExecuteReader();
+
+
+        }
         public void InsertData()
         {
             item.Add(this);
@@ -37,7 +52,7 @@ namespace proj1
                 con.Open();
                 string query = "insert into Items values('" + this.itemID + "', '" + this.itemName + "', " +
                     "'" + this.Quantity + "', '" + this.Price +
-                    "', '" + this.Status + "', '" + this.CatagoryID + "')";
+                    "', '" + this.Status + "', '" + this.CategoryID +"')";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -63,7 +78,7 @@ namespace proj1
                     + "', itemQuantity = '" + this.Quantity
                     + "', itemPrice = '" + this.Price
                     + "', itemstatus = '" + this.Status
-                    + "', catId = '" + this.CatagoryID
+                    + "', catId = '" + this.CategoryID
                     + "' Where itemId = '" + this.itemID + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
@@ -74,6 +89,7 @@ namespace proj1
                 MessageBox.Show(ex.Message);
             }
         }
+        
 
         public void DeleteData()
         {

@@ -175,7 +175,7 @@ namespace proj1
             this.removebtn.Name = "removebtn";
             this.removebtn.Size = new System.Drawing.Size(151, 51);
             this.removebtn.TabIndex = 12;
-            this.removebtn.Text = "Remove";
+            this.removebtn.Text = "Delete";
             this.removebtn.UseVisualStyleBackColor = false;
             this.removebtn.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -189,7 +189,7 @@ namespace proj1
             this.ousbtn.Name = "ousbtn";
             this.ousbtn.Size = new System.Drawing.Size(151, 51);
             this.ousbtn.TabIndex = 13;
-            this.ousbtn.Text = "Out Of Stock";
+            this.ousbtn.Text = "No Stock";
             this.ousbtn.UseVisualStyleBackColor = false;
             this.ousbtn.Click += new System.EventHandler(this.ousbtn_Click);
             // 

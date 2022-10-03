@@ -90,13 +90,13 @@ namespace proj1
                 {
                     itemclass item = new itemclass
                     {
-                        ID = idtxt.Text,
+                        itemID = idtxt.Text,
 
-                        Item_Name = nametxt.Text,
+                        itemName = nametxt.Text,
 
                         Quantity = quantitytxt.Text,
 
-                        //Status = "true/temp",   
+                        Status = "true/temp",   
 
                         Price = pricetxt.Text,
 
@@ -116,11 +116,11 @@ namespace proj1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//UPDATE BUTTON
         {
             try
             {
-                DataGridViewRow upd = datagrid.Rows[index];
+
 
                 var confirmResult = MessageBox.Show("Are you sure to update this row",
                                      "Update the list",
@@ -128,13 +128,19 @@ namespace proj1
                 if (confirmResult == DialogResult.Yes)
                 {
 
-
-                    upd.Cells[0].Value = idtxt.Text;
-                    upd.Cells[1].Value = nametxt.Text;
-                    upd.Cells[2].Value = quantitytxt.Text;
-                    //upd.Cells[3].Value = statCombo.Text;
-                    //upd.Cells[4].Value = catagoryinput;
+                    itemclass upd = new itemclass
+                    {
+                        itemName = nametxt.Text,
+                        Quantity = quantitytxt.Text,
+                        //Status = "true",
+                        Price = pricetxt.Text,
+                       // CatagoryID = "1",
+                        
+                    };
+                    upd.UpdateData();
+                    DisplayData();
                 }
+
 
                 else
                 {
@@ -148,34 +154,36 @@ namespace proj1
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)//DELETE BUTTON
         {
-            DataGridViewRow del = datagrid.Rows[index];
 
-
-            del.Cells[0].Value = "";
-            del.Cells[1].Value = "";
-            del.Cells[2].Value = "";
-            del.Cells[3].Value = "";
-            //del.Cells[4].Value = "";
-            
+            itemclass del = new itemclass
+            {
+                itemID = idtxt.Text,
+            };
+            del.DeleteData();
+            DisplayData();
 
         }
 
         private void ousbtn_Click(object sender, EventArgs e)
         {
 
-            DataGridViewRow del = datagrid.Rows[index];
-            
-            del.Cells[3].Value = "";
-           
+
+            itemclass upd = new itemclass
+            {
+                
+            };
+            upd.Outofstock();
+            DisplayData();
+
         }
 
         private void Item_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select * from items";
+            string query = "Select * from Items";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);

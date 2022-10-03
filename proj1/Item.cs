@@ -18,7 +18,7 @@ namespace proj1
         int index;
         int tempcat = 1;
         //string catagoryinput = "temp";
-        string connectionstring = @"Data Source = BATCOMPUTER\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Item()
         {
@@ -96,11 +96,13 @@ namespace proj1
 
                         Quantity = quantitytxt.Text,
 
-                        Status = "true/temp",   
+                        Status = "true/temp",
+                        //needs a real value 
 
                         Price = pricetxt.Text,
 
                         CatagoryID = "1",
+                        //needs a real value 
 
                     };
                     item.InsertData();
@@ -130,12 +132,20 @@ namespace proj1
 
                     itemclass upd = new itemclass
                     {
+                        itemID = idtxt.Text,
+
                         itemName = nametxt.Text,
+
                         Quantity = quantitytxt.Text,
-                        //Status = "true",
+
+                        Status = "true/temp",
+                        //needs a real value 
+
                         Price = pricetxt.Text,
-                       // CatagoryID = "1",
-                        
+
+                        CatagoryID = "1",
+                        //needs a real value 
+
                     };
                     upd.UpdateData();
                     DisplayData();

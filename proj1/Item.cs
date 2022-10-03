@@ -41,18 +41,6 @@ namespace proj1
 
             datagrid.DataSource = dg;
         }
-        private void item_Load(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection(connectionstring);
-            con.Open();
-            string query = "Select * from Customers";
-            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
-            DataTable dg = new DataTable();
-            cmd.Fill(dg);
-
-            datagrid.DataSource = dg;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             errorhandler.Clear();
@@ -108,7 +96,7 @@ namespace proj1
 
                         Quantity = quantitytxt.Text,
 
-                        Status = "true/temp",
+                        //Status = "true/temp",   
 
                         Price = pricetxt.Text,
 
@@ -116,8 +104,9 @@ namespace proj1
 
                     };
                     item.InsertData();
-                    datagrid.DataSource = null;
-                    datagrid.DataSource = itemclass.GetAllProducts();
+                    DisplayData();
+                    //datagrid.DataSource = null;
+                   // datagrid.DataSource = itemclass.GetAllProducts();
                 }
 
                 catch (Exception)
@@ -184,7 +173,14 @@ namespace proj1
 
         private void Item_Load(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "Select * from items";
+            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
+            DataTable dg = new DataTable();
+            cmd.Fill(dg);
 
+            datagrid.DataSource = dg;
         }
 
         private void datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -205,6 +201,11 @@ namespace proj1
             {
                 MessageBox.Show("Type MisMatch");
             }
+        }
+
+        private void datagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

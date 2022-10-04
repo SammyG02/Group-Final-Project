@@ -148,6 +148,7 @@ namespace proj1
                     };
                     item.InsertData();
                     DisplayData();
+                    new SPList(item.itemID, item.itemName, item.CategoryID, item.Price);
                     //datagrid.DataSource = null;
                    // datagrid.DataSource = itemclass.GetAllProducts();
                 }

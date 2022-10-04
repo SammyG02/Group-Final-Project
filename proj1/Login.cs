@@ -138,7 +138,8 @@ namespace proj1
                         }
                         else if(check == 10)//customer
                         {
-                            new SellingPlace().Show();
+                            
+                            new SellingPlace(ins.loginName).Show();
                             this.Hide();
 
                         }

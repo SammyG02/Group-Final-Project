@@ -21,16 +21,46 @@ namespace proj1
 
         int index;
 
-        public SellingPlace()
+        public SellingPlace(string LN)
         {
             InitializeComponent();
+            this.Controls.Add(UserCO);
+            UserCO.Text = LN;
+            Info(LN);
             
         }
 
         
-        public void getter()
+        public void Info(string CusName)
         {
-            
+           
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "select * from Customers where CustomerName = '" + CusName + "'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader myReader;
+            myReader = cmd.ExecuteReader();
+
+            try
+            {
+                while (myReader.Read())
+                {
+                    
+                    string customerBal = myReader.GetString(myReader.GetOrdinal("CustomerBalance"));
+
+                    BalanceCO.Text = "Balance " + customerBal;
+
+                }
+
+                
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error");
+
+            }
+
         }
         
         /*public SellingPlace(int Id)
@@ -76,15 +106,7 @@ namespace proj1
             DGVCO.DataSource = dg;
 
 
-            LoginClass lc = new LoginClass();
-            UserCO.Text = lc.loginName;
-            /*string query1 = "Select * from Customers";
-            SqlCommand cmd1 = new SqlCommand(query1, con);
-            SqlDataReader myReader;
-            myReader = cmd1.ExecuteReader();
-            myReader.Read();
-            String customerName = myReader.GetString(myReader.GetOrdinal("CustomerName"));
-            NameCO.Text = customerName;*/
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -111,6 +133,26 @@ namespace proj1
         private void DGVCO_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void ClearCO_Click(object sender, EventArgs e)
+        {
+            
+            var confirmResult = MessageBox.Show("Are you sure to Clear the Textbox",
+                                     "Clear the TextBox",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                IdCO.Text = "";
+                QuantityCO.Text = "";
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            SPList load = new SPList(null, null, 0, null); //WORK IN PROGRESS 
+            load.Show();
         }
     }
 }

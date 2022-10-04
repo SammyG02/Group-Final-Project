@@ -84,7 +84,7 @@ namespace proj1.Model
                         if (customerName.Equals(loginName) && customerPassword.Equals(loginPassword))
                         {
                             checker = 10;
-
+                            
                             //break;
                         }
 

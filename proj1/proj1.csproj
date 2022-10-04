@@ -80,7 +80,6 @@
     </Compile>
     <Compile Include="Model\CustomerClass.cs" />
     <Compile Include="Model\LoginClass.cs" />
-    <Compile Include="Model\SellingPlaceClass.cs" />
     <Compile Include="Model\SignupClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +94,12 @@
     </Compile>
     <Compile Include="signUp.Designer.cs">
       <DependentUpon>signUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPList.Designer.cs">
+      <DependentUpon>SPList.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
@@ -126,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="signUp.resx">
       <DependentUpon>signUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPList.resx">
+      <DependentUpon>SPList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -256,7 +256,9 @@ namespace proj1
             // catrgoryCb
             // 
             this.catrgoryCb.FormattingEnabled = true;
-            this.catrgoryCb.Location = new System.Drawing.Point(525, 119);
+            this.catrgoryCb.Items.AddRange(new object[] {
+            "PlaceHolder"});
+            this.catrgoryCb.Location = new System.Drawing.Point(525, 162);
             this.catrgoryCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.catrgoryCb.Name = "catrgoryCb";
             this.catrgoryCb.Size = new System.Drawing.Size(121, 25);
@@ -267,7 +269,7 @@ namespace proj1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label7.Location = new System.Drawing.Point(518, 84);
+            this.label7.Location = new System.Drawing.Point(518, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 37);
             this.label7.TabIndex = 19;

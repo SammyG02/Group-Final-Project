@@ -20,7 +20,7 @@ namespace proj1
 
         int index;
 
-        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Customer()
         {
@@ -224,6 +224,7 @@ namespace proj1
         
         private void Customer_Load(object sender, EventArgs e)
         {
+            
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
             string query = "Select * from Customers";

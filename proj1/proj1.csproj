@@ -80,6 +80,7 @@
     </Compile>
     <Compile Include="Model\CustomerClass.cs" />
     <Compile Include="Model\LoginClass.cs" />
+    <Compile Include="Model\SellingPlaceClass.cs" />
     <Compile Include="Model\SignupClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

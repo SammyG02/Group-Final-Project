@@ -30,13 +30,13 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.UserCO = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.datagrid = new System.Windows.Forms.DataGridView();
+            this.DGVCO = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IdCO = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCO)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,16 +72,17 @@
             this.label3.Text = "X";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label1
+            // UserCO
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 121);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "User Name";
+            this.UserCO.AutoSize = true;
+            this.UserCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserCO.ForeColor = System.Drawing.Color.White;
+            this.UserCO.Location = new System.Drawing.Point(21, 165);
+            this.UserCO.Name = "UserCO";
+            this.UserCO.Size = new System.Drawing.Size(119, 25);
+            this.UserCO.TabIndex = 5;
+            this.UserCO.Text = "User Name";
+            this.UserCO.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -106,24 +107,26 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Buying Place";
             // 
-            // datagrid
+            // DGVCO
             // 
-            this.datagrid.AllowUserToOrderColumns = true;
-            this.datagrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid.Location = new System.Drawing.Point(450, 165);
-            this.datagrid.Name = "datagrid";
-            this.datagrid.RowHeadersWidth = 51;
-            this.datagrid.RowTemplate.Height = 24;
-            this.datagrid.Size = new System.Drawing.Size(818, 459);
-            this.datagrid.TabIndex = 15;
+            this.DGVCO.AllowUserToOrderColumns = true;
+            this.DGVCO.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.DGVCO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVCO.Location = new System.Drawing.Point(450, 165);
+            this.DGVCO.Name = "DGVCO";
+            this.DGVCO.RowHeadersWidth = 51;
+            this.DGVCO.RowTemplate.Height = 24;
+            this.DGVCO.Size = new System.Drawing.Size(818, 459);
+            this.DGVCO.TabIndex = 15;
+            this.DGVCO.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCO_CellClick);
+            this.DGVCO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCO_CellContentClick);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 180);
+            this.label5.Location = new System.Drawing.Point(24, 360);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 25);
             this.label5.TabIndex = 16;
@@ -135,25 +138,26 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(21, 289);
+            this.label6.Location = new System.Drawing.Point(21, 223);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 25);
+            this.label6.Size = new System.Drawing.Size(90, 25);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Name";
+            this.label6.Text = "Balance";
             // 
-            // textBox1
+            // IdCO
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(26, 218);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 48);
-            this.textBox1.TabIndex = 18;
+            this.IdCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IdCO.Location = new System.Drawing.Point(26, 399);
+            this.IdCO.Multiline = true;
+            this.IdCO.Name = "IdCO";
+            this.IdCO.Size = new System.Drawing.Size(262, 48);
+            this.IdCO.TabIndex = 18;
+            this.IdCO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(26, 327);
+            this.textBox2.Location = new System.Drawing.Point(26, 262);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(262, 48);
@@ -203,7 +207,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(24, 399);
+            this.label7.Location = new System.Drawing.Point(21, 464);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 25);
             this.label7.TabIndex = 24;
@@ -211,8 +215,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(29, 446);
+            this.textBox3.Location = new System.Drawing.Point(26, 503);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(262, 48);
@@ -234,7 +237,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(23, 536);
+            this.label9.Location = new System.Drawing.Point(23, 568);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(135, 32);
             this.label9.TabIndex = 27;
@@ -254,21 +257,22 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IdCO);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.datagrid);
+            this.Controls.Add(this.DGVCO);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.UserCO);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SellingPlace";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SellingPlace";
+            this.Load += new System.EventHandler(this.SellingPlace_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,13 +282,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UserCO;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView datagrid;
+        private System.Windows.Forms.DataGridView DGVCO;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IdCO;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

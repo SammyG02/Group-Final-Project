@@ -60,7 +60,7 @@ namespace proj1
             }
             else if (string.IsNullOrEmpty(txtPass.Text))
             {
-                errorP.SetError(txtPass, "Account is needed");
+                errorP.SetError(txtPass, "Password is needed");
             }
 
             else if (!checkId.IsMatch(txtId.Text))

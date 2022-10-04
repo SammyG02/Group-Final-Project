@@ -79,6 +79,8 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CustomerClass.cs" />
+    <Compile Include="Model\LoginClass.cs" />
+    <Compile Include="Model\SignupClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SellingPlace.cs">

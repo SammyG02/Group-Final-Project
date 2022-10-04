@@ -117,7 +117,8 @@ namespace proj1
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-
+            new Login().Show();
+            this.Hide();
         }
     }
 }

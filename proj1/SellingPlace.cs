@@ -21,5 +21,16 @@ namespace proj1
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
     }
 }

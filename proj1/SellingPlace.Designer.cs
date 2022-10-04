@@ -70,6 +70,7 @@
             this.label3.Size = new System.Drawing.Size(33, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -92,6 +93,7 @@
             this.label2.Size = new System.Drawing.Size(83, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "LogOut";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -100,7 +102,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(512, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 39);
+            this.label4.Size = new System.Drawing.Size(220, 38);
             this.label4.TabIndex = 7;
             this.label4.Text = "Buying Place";
             // 

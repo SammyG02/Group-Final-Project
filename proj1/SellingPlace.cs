@@ -106,7 +106,7 @@ namespace proj1
             DGVCO.DataSource = dg;
 
 
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -151,8 +151,22 @@ namespace proj1
         private void button3_Click(object sender, EventArgs e)
         {
 
-            SPList load = new SPList(null, null, 0, null); //WORK IN PROGRESS 
-            load.Show();
+            foreach (var item in itemclass.GetAllProducts())
+            {
+                SPTemplate SPT = new SPTemplate();
+                SPT.sId = item.itemID;
+                SPT.sName = item.itemName;
+                SPT.sCategory = item.CategoryName;
+                SPT.sPrice = item.Price;
+
+                flowLayoutPanel1.Controls.Add(SPT);
+            };
+
+            SPTemplate SPT1 = new SPTemplate();
+            SPT1.sQuantity = QuantityCO.Text;
+            SPT1.sTotal = BalanceCO.Text;
+            flowLayoutPanel1.Controls.Add(SPT1);
+
         }
     }
 }

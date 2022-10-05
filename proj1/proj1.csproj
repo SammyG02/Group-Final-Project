@@ -95,11 +95,11 @@
     <Compile Include="signUp.Designer.cs">
       <DependentUpon>signUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="SPList.cs">
-      <SubType>Form</SubType>
+    <Compile Include="SPTemplate.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SPList.Designer.cs">
-      <DependentUpon>SPList.cs</DependentUpon>
+    <Compile Include="SPTemplate.Designer.cs">
+      <DependentUpon>SPTemplate.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
@@ -132,8 +132,8 @@
     <EmbeddedResource Include="signUp.resx">
       <DependentUpon>signUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SPList.resx">
-      <DependentUpon>SPList.cs</DependentUpon>
+    <EmbeddedResource Include="SPTemplate.resx">
+      <DependentUpon>SPTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

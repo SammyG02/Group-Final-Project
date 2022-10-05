@@ -44,8 +44,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.spTemplate1 = new proj1.SPTemplate();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -101,11 +104,11 @@
             this.DGVCO.AllowUserToOrderColumns = true;
             this.DGVCO.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGVCO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCO.Location = new System.Drawing.Point(450, 165);
+            this.DGVCO.Location = new System.Drawing.Point(450, 156);
             this.DGVCO.Name = "DGVCO";
             this.DGVCO.RowHeadersWidth = 51;
             this.DGVCO.RowTemplate.Height = 24;
-            this.DGVCO.Size = new System.Drawing.Size(818, 459);
+            this.DGVCO.Size = new System.Drawing.Size(818, 263);
             this.DGVCO.TabIndex = 15;
             this.DGVCO.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCO_CellClick);
             this.DGVCO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCO_CellContentClick);
@@ -135,6 +138,7 @@
             // 
             // IdCO
             // 
+            this.IdCO.Enabled = false;
             this.IdCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdCO.Location = new System.Drawing.Point(26, 399);
             this.IdCO.Multiline = true;
@@ -163,7 +167,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button2.Location = new System.Drawing.Point(767, 654);
+            this.button2.Location = new System.Drawing.Point(699, 831);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 51);
             this.button2.TabIndex = 22;
@@ -210,7 +214,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(993, 673);
+            this.label8.Location = new System.Drawing.Point(955, 850);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 32);
             this.label8.TabIndex = 26;
@@ -237,12 +241,34 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.spTemplate1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(450, 449);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(818, 376);
+            this.flowLayoutPanel1.TabIndex = 28;
+            // 
+            // spTemplate1
+            // 
+            this.spTemplate1.Location = new System.Drawing.Point(3, 3);
+            this.spTemplate1.Name = "spTemplate1";
+            this.spTemplate1.sCategory = null;
+            this.spTemplate1.sId = null;
+            this.spTemplate1.Size = new System.Drawing.Size(279, 292);
+            this.spTemplate1.sName = null;
+            this.spTemplate1.sPrice = null;
+            this.spTemplate1.sQuantity = null;
+            this.spTemplate1.sTotal = null;
+            this.spTemplate1.TabIndex = 0;
+            // 
             // SellingPlace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1280, 904);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.QuantityCO);
@@ -266,6 +292,7 @@
             this.Load += new System.EventHandler(this.SellingPlace_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVCO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +316,7 @@
         private System.Windows.Forms.TextBox QuantityCO;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private SPTemplate spTemplate1;
     }
 }

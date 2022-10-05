@@ -9,6 +9,8 @@ using System.Data;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using proj1.Model;
+
 namespace proj1
 {
     class itemclass
@@ -140,7 +142,40 @@ namespace proj1
 
         static public List<itemclass> GetAllProducts()
         {
+            //Grid
             return item;
+
+            //DBMS
+            List<itemclass> finalp = new List<itemclass>();
+            try
+            {
+
+                string connectionstring = @"Data Source =  LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                SqlConnection con = new SqlConnection(connectionstring);
+                con.Open();
+                string query = "Select * from Items";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader sdr = cmd.ExecuteReader();
+
+                while (sdr.Read())
+                {
+                    itemclass p = new itemclass();
+                    p.itemID = (string)sdr["itemId"];
+                    p.itemName = (string)sdr["itemName"];
+                    p.Quantity = (string)sdr["itemQuantity"];
+                    p.Price = (string)sdr["itemPrice"];
+                    p.Status = (string)sdr["itemStatus"];
+                    p.CategoryID = (int)sdr["catId"]; 
+                    finalp.Add(p);
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return finalp;
         }
     }
 }

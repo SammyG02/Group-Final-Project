@@ -135,3 +135,4 @@ C:\Users\darkb\OneDrive\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\pro
 C:\Users\darkb\OneDrive\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.SellingPlace.resources
 C:\Users\Hi\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.SellingPlace.resources
 C:\Users\Benoni\Documents\GitHub\Group-Final-Project\proj1\obj\Debug\proj1.SPTemplate.resources
+C:\Users\Samuel\Desktop\Group-Final-Project\proj1\obj\Debug\proj1.SPTemplate.resources

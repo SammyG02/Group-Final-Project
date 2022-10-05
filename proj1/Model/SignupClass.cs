@@ -29,7 +29,7 @@ namespace proj1.Model
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "insert into Admins (adminName,adminPassword) values ('" + this.signupName + "', '" + this.signupPassword + "')";

@@ -22,7 +22,7 @@ namespace proj1
         public string itemName { get; set; }
         public string Quantity { get; set; }
         public string Price { get; set; }
-        public string Status { get; set; }
+        
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
 
@@ -33,7 +33,7 @@ namespace proj1
 
         public void getCatId(String categoryName)
         {
-            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
             string query = "select categoryId from Category where CategoryName = '"+categoryName+"'";
@@ -49,12 +49,12 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "insert into Items values('" + this.itemID + "', '" + this.itemName + "', " +
                     "'" + this.Quantity + "', '" + this.Price +
-                    "', '" + this.Status + "', '" + this.CategoryID +"')";
+                    "', '" + this.CategoryID +"')";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -73,13 +73,12 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "update Items Set itemName = '" + this.itemName
                     + "', itemQuantity = '" + this.Quantity
                     + "', itemPrice = '" + this.Price
-                    + "', itemstatus = '" + this.Status
                     + "', catId = '" + this.CategoryID
                     + "' Where itemId = '" + this.itemID + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -101,7 +100,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Delete from Items where itemId = '" + this.itemID + "'";
@@ -123,7 +122,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "update Items Set itemQuantity = 0'"
@@ -150,7 +149,7 @@ namespace proj1
             try
             {
 
-                string connectionstring = @"Data Source =  LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source =  LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Select * from Items";
@@ -164,7 +163,6 @@ namespace proj1
                     p.itemName = (string)sdr["itemName"];
                     p.Quantity = (string)sdr["itemQuantity"];
                     p.Price = (string)sdr["itemPrice"];
-                    p.Status = (string)sdr["itemStatus"];
                     p.CategoryID = (int)sdr["catId"]; 
                     finalp.Add(p);
                 }

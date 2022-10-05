@@ -23,7 +23,7 @@ namespace proj1
         }
         void fillInCombo()
         {
-            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
             string query = "select RoleName from Role";
@@ -113,52 +113,57 @@ namespace proj1
             }
             else
             {
-                String role = loginRoleCb.SelectedItem.ToString();
-
                 try
                 {
-                    
+                    String role = loginRoleCb.SelectedItem.ToString();
+                
 
-                    LoginClass ins = new LoginClass
-                    {
 
-                        loginName = txtLoginName.Text,
-                        loginPassword = txtLoginPassword.Text,
-                        loginRole = role,   
-                        
-                    };
-                    int check = ins.check();
-                    if (check == 10 || check == 1)
-                    {
-                        MessageBox.Show("Access Granted");
-                        if(check == 1)//admin
+
+                   
+
+
+                        LoginClass ins = new LoginClass
                         {
-                            new Form1().Show();
-                            this.Hide();
-                        }
-                        else if(check == 10)//customer
+
+                            loginName = txtLoginName.Text,
+                            loginPassword = txtLoginPassword.Text,
+                            loginRole = role,
+
+                        };
+                        int check = ins.check();
+                        if (check == 10 || check == 1)
                         {
-                            
-                            new SellingPlace(ins.loginName).Show();
-                            this.Hide();
+                            MessageBox.Show("Access Granted");
+                            if (check == 1)//admin
+                            {
+                                new Form1().Show();
+                                this.Hide();
+                            }
+                            else if (check == 10)//customer
+                            {
+
+                                new SellingPlace(ins.loginName).Show();
+                                this.Hide();
+
+                            }
 
                         }
-                        
+
+                        else //neither customer nor Admin
+                        {
+                            MessageBox.Show("Access Denied");
+                        }
+
+
+
                     }
 
-                    else //neither customer nor Admin
+                    catch (Exception)
                     {
-                        MessageBox.Show("Access Denied");
+                        MessageBox.Show("Type MisMatch");
                     }
-
-
-
-                }
-
-                catch (Exception)
-                {
-                    MessageBox.Show("Type MisMatch");
-                }
+                
 
             }
                 

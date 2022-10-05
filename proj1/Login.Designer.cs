@@ -223,6 +223,7 @@
             this.loginRoleCb.Name = "loginRoleCb";
             this.loginRoleCb.Size = new System.Drawing.Size(281, 36);
             this.loginRoleCb.TabIndex = 15;
+            this.loginRoleCb.Text = "Select Role";
             // 
             // label8
             // 

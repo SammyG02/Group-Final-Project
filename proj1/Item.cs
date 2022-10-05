@@ -18,7 +18,7 @@ namespace proj1
         int index;
         
         //string catagoryinput = "temp";
-        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Item()
         {
@@ -28,7 +28,7 @@ namespace proj1
 
          void fillCombo()
         {
-            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
             string query = "select categoryName from Category";
@@ -64,7 +64,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,itemStatus as Status,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
+            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
@@ -134,9 +134,6 @@ namespace proj1
 
                         Quantity = quantitytxt.Text,
 
-                        Status = "true/temp",
-                        //needs a real value 
-
                         Price = pricetxt.Text,
                         CategoryID = categoryIdValue,
 
@@ -186,8 +183,7 @@ namespace proj1
 
                         Quantity = quantitytxt.Text,
 
-                        Status = "true/temp",
-                        //needs a real value 
+                        
 
                         Price = pricetxt.Text,
 
@@ -226,14 +222,9 @@ namespace proj1
 
         private void ousbtn_Click(object sender, EventArgs e)
         {
+            //clearbtn
 
-
-            itemclass upd = new itemclass
-            {
-                
-            };
-            upd.Outofstock();
-            DisplayData();
+            
 
         }
 
@@ -241,7 +232,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,itemStatus as Status,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
+            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
@@ -259,7 +250,7 @@ namespace proj1
                 nametxt.Text = row.Cells[1].Value.ToString();
                 quantitytxt.Text = row.Cells[2].Value.ToString();
                 pricetxt.Text = row.Cells[3].Value.ToString();
-               // status.Checked = row.Cells[4].Value.ToString();
+               
                 
                 
             }

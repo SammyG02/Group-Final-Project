@@ -15,7 +15,7 @@ namespace proj1
 {
     public partial class signUp : Form
     {
-        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
         public signUp()
         {
             InitializeComponent();

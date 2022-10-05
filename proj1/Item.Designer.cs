@@ -32,7 +32,6 @@ namespace proj1
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.nametxt = new System.Windows.Forms.TextBox();
@@ -46,7 +45,6 @@ namespace proj1
             this.errorhandler = new System.Windows.Forms.ErrorProvider(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.pricetxt = new System.Windows.Forms.TextBox();
-            this.status = new System.Windows.Forms.CheckBox();
             this.catrgoryCb = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
@@ -74,17 +72,6 @@ namespace proj1
             this.label2.Size = new System.Drawing.Size(46, 37);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label3.Location = new System.Drawing.Point(518, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 37);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Status";
             // 
             // label4
             // 
@@ -206,6 +193,7 @@ namespace proj1
             // 
             this.datagrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.datagrid.Location = new System.Drawing.Point(9, 234);
             this.datagrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.datagrid.Name = "datagrid";
@@ -240,28 +228,16 @@ namespace proj1
             this.pricetxt.Size = new System.Drawing.Size(182, 23);
             this.pricetxt.TabIndex = 16;
             // 
-            // status
-            // 
-            this.status.AutoSize = true;
-            this.status.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.status.Location = new System.Drawing.Point(525, 56);
-            this.status.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(79, 21);
-            this.status.TabIndex = 17;
-            this.status.Text = "In Stock";
-            this.status.UseVisualStyleBackColor = true;
-            // 
             // catrgoryCb
             // 
+            this.catrgoryCb.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.catrgoryCb.FormattingEnabled = true;
             this.catrgoryCb.Items.AddRange(new object[] {
             "PlaceHolder"});
-            this.catrgoryCb.Location = new System.Drawing.Point(525, 162);
+            this.catrgoryCb.Location = new System.Drawing.Point(504, 143);
             this.catrgoryCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.catrgoryCb.Name = "catrgoryCb";
-            this.catrgoryCb.Size = new System.Drawing.Size(121, 25);
+            this.catrgoryCb.Size = new System.Drawing.Size(140, 25);
             this.catrgoryCb.TabIndex = 18;
             // 
             // label7
@@ -269,7 +245,7 @@ namespace proj1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label7.Location = new System.Drawing.Point(518, 115);
+            this.label7.Location = new System.Drawing.Point(508, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 37);
             this.label7.TabIndex = 19;
@@ -283,7 +259,6 @@ namespace proj1
             this.ClientSize = new System.Drawing.Size(677, 600);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.catrgoryCb);
-            this.Controls.Add(this.status);
             this.Controls.Add(this.pricetxt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.datagrid);
@@ -296,7 +271,6 @@ namespace proj1
             this.Controls.Add(this.nametxt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.4F);
@@ -317,7 +291,6 @@ namespace proj1
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox nametxt;
@@ -331,7 +304,6 @@ namespace proj1
         private System.Windows.Forms.ErrorProvider errorhandler;
         private System.Windows.Forms.TextBox pricetxt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox status;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox catrgoryCb;
     }

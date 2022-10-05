@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -17,8 +18,11 @@ namespace proj1
 {
     public partial class SellingPlace : Form
     {
-        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
-
+        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string itemRemaining="";
+        string prodName = "";
+        
+        
         int index;
 
         public SellingPlace(string LN)
@@ -45,11 +49,14 @@ namespace proj1
             {
                 while (myReader.Read())
                 {
+                    //getting balances value from customer database using the Customername that is passed
+                    //during login
+                    //since balance is int type we read it as into and change it to string type
                     
-                    string customerBal = myReader.GetString(myReader.GetOrdinal("CustomerBalance"));
-
-                    BalanceCO.Text = "Balance " + customerBal;
-
+                    String customerBal = myReader.GetInt32(myReader.GetOrdinal("CustomerBalance")).ToString();
+                    
+                    lblBalance.Text = customerBal;
+                    //setting lable to balance
                 }
 
                 
@@ -95,10 +102,10 @@ namespace proj1
 
         private void SellingPlace_Load(object sender, EventArgs e)
         {
-
+            //getting the Item table from database
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,itemStatus as Status,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
+            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
@@ -120,7 +127,14 @@ namespace proj1
             {
                 index = e.RowIndex;
                 DataGridViewRow row = DGVCO.Rows[index];
-                IdCO.Text = row.Cells[0].Value.ToString();
+                //getting data from selected Item table cells
+                txtId.Text = row.Cells[0].Value.ToString();
+                prodName = row.Cells[1].Value.ToString();
+                itemRemaining = row.Cells[2].Value.ToString();
+                lblPrice.Text = row.Cells[3].Value.ToString();
+                
+
+
 
 
             }
@@ -143,29 +157,138 @@ namespace proj1
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
-                IdCO.Text = "";
-                QuantityCO.Text = "";
+                txtId.Text = "";
+                txtQuantity.Text = "";
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            foreach (var item in itemclass.GetAllProducts())
+            ErrP.Clear();
+            Regex checkquantity = new Regex(@"^([0-9]*)$");
+            if (string.IsNullOrEmpty(txtQuantity.Text))
             {
-                SPTemplate SPT = new SPTemplate();
-                SPT.sId = item.itemID;
-                SPT.sName = item.itemName;
-                SPT.sCategory = item.CategoryName;
-                SPT.sPrice = item.Price;
+                MessageBox.Show(txtQuantity, "Can't Add to Cart if Quantity is Empty!!");
+            }
+            else if (!checkquantity.IsMatch(txtQuantity.Text))
+            {
+                MessageBox.Show(txtQuantity, "Can't Add to Cart if Quantity has letters");
+            }
+            else
+            {
+                int totPrice = ((Int32.Parse(txtQuantity.Text)) * (Int32.Parse(lblPrice.Text)));
 
-                flowLayoutPanel1.Controls.Add(SPT);
-            };
 
-            SPTemplate SPT1 = new SPTemplate();
-            SPT1.sQuantity = QuantityCO.Text;
-            SPT1.sTotal = BalanceCO.Text;
-            flowLayoutPanel1.Controls.Add(SPT1);
+                int balance = Int32.Parse(lblBalance.Text);
+
+                int itemLeft = Convert.ToInt32(itemRemaining);
+                int itemWanted = Convert.ToInt32(txtQuantity.Text);
+                lblTot.Text = totPrice.ToString();
+
+                if (totPrice > balance)
+                {
+                    MessageBox.Show("You dont have Enough money!");
+
+                }
+                else if (itemLeft < itemWanted)
+                {
+                    MessageBox.Show("Not Enough Quantity In Stock");
+                }
+                else
+                {
+                    DataGridViewRow newRow = new DataGridViewRow();
+                    newRow.CreateCells(cartDGV);
+                    newRow.Cells[0].Value = txtId.Text;
+                    newRow.Cells[1].Value = prodName;
+                    newRow.Cells[2].Value = lblTot.Text;
+                    newRow.Cells[3].Value = txtQuantity.Text;
+                    newRow.Cells[4].Value = Convert.ToInt32(txtQuantity.Text) * Convert.ToInt32(lblPrice.Text);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    //need to do work on database ..updating balance and quantity 
+
+
+
+
+
+
+
+
+
+
+
+                    cartDGV.Rows.Add(newRow);
+
+                }
+
+            }
+            
+
+
+        }
+
+        private void IdCO_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cartDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+            int quant = 0;
+            int uPrice = 0;
+            ErrP.Clear();
+            Regex checkquantity = new Regex(@"^([0-9]*)$");
+
+            if (string.IsNullOrEmpty(txtQuantity.Text))
+            {
+                ErrP.SetError(txtQuantity, "Quantity is needed");
+            }
+            else if (!checkquantity.IsMatch(txtQuantity.Text))
+            {
+                ErrP.SetError(txtQuantity, "Quantity can't include letters");
+            }
+            else
+            {
+                quant = Int32.Parse(txtQuantity.Text);
+                uPrice = Int32.Parse(lblPrice.Text);
+
+
+                int totPrice = quant * uPrice;
+                lblTot.Text = totPrice.ToString();
+
+            }
+
+            
+
+            
+
+
+
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
 
         }
     }

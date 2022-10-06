@@ -34,7 +34,7 @@ namespace proj1.Model
 
             //DBMS
             try
-            {
+            {   
                 string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
@@ -115,7 +115,7 @@ namespace proj1.Model
                 string connectionstring = @"Data Source =  LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Select * from Customers";
+                string query = "Exec [Select Customers]";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader sdr = cmd.ExecuteReader();
 

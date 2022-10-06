@@ -98,7 +98,7 @@ namespace proj1
                 string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Select * from Category";
+                string query = "Exec [Select Category]";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader sdr = cmd.ExecuteReader();
 

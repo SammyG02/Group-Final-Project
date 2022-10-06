@@ -214,7 +214,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select * from Customers";
+            string query = "Exec [Select Customers]";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
@@ -227,7 +227,7 @@ namespace proj1
             
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select * from Customers";
+            string query = "Exec [Select Customers]";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);

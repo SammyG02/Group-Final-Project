@@ -28,7 +28,7 @@ namespace proj1.Model
                 checker = 2;
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "select * from Admins";
+                string query = "Exec [Select Admins]";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader myReader;
                 myReader = cmd.ExecuteReader();
@@ -69,7 +69,7 @@ namespace proj1.Model
                 checker = 3;
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "select * from Customers";
+                string query = "Exec [Select Customers]";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader myReader;
                 myReader = cmd.ExecuteReader();

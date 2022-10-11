@@ -34,13 +34,18 @@ namespace proj1.Model
 
             //DBMS
             try
-            {   
-                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            {
+                //LAPTOP-BBJ3R5V0\SQLEXPRESS
+                //LAPTOP-T60OO29F\SQLEXPRESS
+                //
+                //
+                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "insert into Customers values('" + this.CustomerID + "', '" + this.CustomerName + "', " +
-                    "'" + this.CustomerPass + "', '" + this.CustomerPhone +
-                    "', '" + this.CustomerEmail + "', '" + this.CustomerBal + "', '" + this.CustomerDate + "')";
+                string query = "Exec [Insert Customers] ' " + this.CustomerID + " ', '" 
+                                + this.CustomerName + " ', '" + this.CustomerPass + " ', '" 
+                                + this.CustomerPhone + " ', '" + this.CustomerEmail + " ', '"
+                                + this.CustomerBal + " ', '" + this.CustomerDate + " ' ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -60,16 +65,13 @@ namespace proj1.Model
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "update Customers Set CustomerName = '" + this.CustomerName 
-                    + "', CustomerPassword = '" + this.CustomerPass 
-                    + "', CustomerPhone = '" + this.CustomerPhone 
-                    + "', CustomerEmail = '" + this.CustomerEmail 
-                    + "', CustomerBalance = '" + this.CustomerBal 
-                    + "', dates = '" + this.CustomerDate +
-                    "' Where CustomerId = '" + this.CustomerID + "'";
+                string query = "Exec [Update Customers] ' " + this.CustomerID + " ', '"
+                                + this.CustomerName + " ', '" + this.CustomerPass + " ', '"
+                                + this.CustomerPhone + " ', '" + this.CustomerEmail + " ', '"
+                                + this.CustomerBal + " ', '" + this.CustomerDate + " ' ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -88,10 +90,10 @@ namespace proj1.Model
             //DBMS
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Delete from Customers where CustomerId = '" + this.CustomerID + "'";
+                string query = "Exec [Delete Customers] ' " + this.CustomerID + " ' ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -112,7 +114,7 @@ namespace proj1.Model
             try
             {
 
-                string connectionstring = @"Data Source =  LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source =  LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Exec [Select Customers]";

@@ -17,7 +17,7 @@ namespace proj1
     {
 
         int index;
-        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
         public Category()
         {
             InitializeComponent();
@@ -104,15 +104,35 @@ namespace proj1
               //DeleteButton
             private void Deletbtn_Click(object sender, EventArgs e)
             {
-            CategoryClass del = new CategoryClass
-            {
-                CategoryID = txtId.Text,
-            };
-            del.DeleteData();
-            DisplayData();
+                try
+                {
+                    var confirmResult = MessageBox.Show("Are you sure to Delete this row",
+                             "Delete the list",
+                             MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        CategoryClass del = new CategoryClass
+                        {
+                            CategoryID = txtId.Text,
+                        };
+                        del.DeleteData();
+                        DisplayData();
 
+                    }
+                    else
+                    {
 
-        }
+                    }
+
+                }
+                catch(Exception)
+                {
+                
+                    MessageBox.Show("User can't Delete without choosing something");
+
+                }
+
+            }
 
               //DataGridView
         private void DGV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -141,7 +161,7 @@ namespace proj1
             {
 
 
-                var confirmResult = MessageBox.Show("Are you sure to update this row",
+                var confirmResult = MessageBox.Show("Are you sure to Update this row",
                                      "Update the list",
                                      MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
@@ -174,7 +194,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "select * from Category";
+            string query = "Exec [Select Category]";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
@@ -186,7 +206,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select * from Category";
+            string query = "Exec [Select Category]";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);

@@ -185,7 +185,7 @@ namespace proj1
             this.ousbtn.Name = "ousbtn";
             this.ousbtn.Size = new System.Drawing.Size(151, 57);
             this.ousbtn.TabIndex = 13;
-            this.ousbtn.Text = "No Stock";
+            this.ousbtn.Text = "Clear";
             this.ousbtn.UseVisualStyleBackColor = false;
             this.ousbtn.Click += new System.EventHandler(this.ousbtn_Click);
             // 
@@ -232,13 +232,12 @@ namespace proj1
             // 
             this.catrgoryCb.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.catrgoryCb.FormattingEnabled = true;
-            this.catrgoryCb.Items.AddRange(new object[] {
-            "PlaceHolder"});
             this.catrgoryCb.Location = new System.Drawing.Point(504, 143);
             this.catrgoryCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.catrgoryCb.Name = "catrgoryCb";
             this.catrgoryCb.Size = new System.Drawing.Size(140, 25);
             this.catrgoryCb.TabIndex = 18;
+            this.catrgoryCb.Text = "...PlaceHolder";
             // 
             // label7
             // 

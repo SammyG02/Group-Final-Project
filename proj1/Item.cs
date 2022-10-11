@@ -18,7 +18,7 @@ namespace proj1
         int index;
         
         //string catagoryinput = "temp";
-        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Item()
         {
@@ -28,7 +28,7 @@ namespace proj1
 
          void fillCombo()
         {
-            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
             string query = "select categoryName from Category";
@@ -163,7 +163,7 @@ namespace proj1
             {
 
 
-                var confirmResult = MessageBox.Show("Are you sure to update this row",
+                var confirmResult = MessageBox.Show("Are you sure to Update this row",
                                      "Update the list",
                                      MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
@@ -210,13 +210,33 @@ namespace proj1
 
         private void button3_Click(object sender, EventArgs e)//DELETE BUTTON
         {
-
-            itemclass del = new itemclass
+            try
             {
-                itemID = idtxt.Text,
-            };
-            del.DeleteData();
-            DisplayData();
+                var confirmResult = MessageBox.Show("Are you sure to Delete this row",
+                                     "Delete the list",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    itemclass del = new itemclass
+                    {
+                        itemID = idtxt.Text,
+                    };
+                    del.DeleteData();
+                    DisplayData();
+
+                }
+                else
+                {
+
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("User can't Delete without choosing something");
+            }
+
+            
 
         }
 
@@ -224,7 +244,19 @@ namespace proj1
         {
             //clearbtn
 
-            
+            var confirmResult = MessageBox.Show("Are you sure to Clear the Textbox",
+                                         "Clear the TextBox",
+                                         MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                idtxt.Text = "";
+                nametxt.Text = "";
+                quantitytxt.Text = "";
+                pricetxt.Text = "";
+
+            }
+
+            else { }
 
         }
 

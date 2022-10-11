@@ -27,10 +27,11 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source =  LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source =  LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "insert into Category values('" + this.CategoryID + "', '" + this.CategoryName + "')";
+                string query = "Exec [Insert Category] ' " + this.CategoryID + " ', '"
+                                + this.CategoryName + " ' ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -49,10 +50,11 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "update Category set CategoryName = '" + this.CategoryName + "' where CategoryID = '" + this.CategoryID + "'";
+                string query = "Exec [Update Category] ' " + this.CategoryID + " ', '"
+                                + this.CategoryName + " ' ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -71,10 +73,10 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Delete from Category where CategoryID = '" + this.CategoryID + "'";
+                string query = "Exec [Delete Category] ' " + this.CategoryID + " ' ";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -95,7 +97,7 @@ namespace proj1
             List<CategoryClass> finalp = new List<CategoryClass>();
             try
             {
-                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Exec [Select Category]";

@@ -20,7 +20,7 @@ namespace proj1
 
         int index;
 
-        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Customer()
         {
@@ -120,7 +120,7 @@ namespace proj1
             {
                 
 
-                var confirmResult = MessageBox.Show("Are you sure to update this row",
+                var confirmResult = MessageBox.Show("Are you sure to Update this row",
                                      "Update the list",
                                      MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
@@ -157,13 +157,35 @@ namespace proj1
         //Delete Button
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
-            CustomerClass del = new CustomerClass
+            try
             {
-                CustomerID = txtId.Text,                
-            };
-            del.DeleteData();
-            DisplayData();
+                var confirmResult = MessageBox.Show("Are you sure to Delete this row",
+                                     "Delete the list",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    CustomerClass del = new CustomerClass
+                    {
+                        CustomerID = txtId.Text,
+
+
+                    };
+                    del.DeleteData();
+                    DisplayData();
+                }
+
+
+                else
+                {
+
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("User can't Delete without choosing something");
+            }
+            
         }
 
         

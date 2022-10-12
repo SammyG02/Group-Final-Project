@@ -52,9 +52,9 @@ namespace proj1
                 string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Exec [Insert Items] ' " + this.itemID + " ', '"
-                                + this.itemName + " ', '" + this.Quantity + " ', '" 
-                                + this.Price + " ', '" + this.CategoryID + " ' ";
+                string query = "Exec [Insert Items] '" + this.itemID + "', '"
+                                + this.itemName + "', '" + this.Quantity + "', '" 
+                                + this.Price + "', '" + this.CategoryID + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -76,9 +76,9 @@ namespace proj1
                 string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Exec [Update Items] ' " + this.itemID + " ', '"
-                                + this.itemName + " ', '" + this.Quantity + " ', '"
-                                + this.Price + " ', '" + this.CategoryID + " ' ";
+                string query = "Exec [Update Items] '" + this.itemID + "', '"
+                                + this.itemName + "', '" + this.Quantity + "', '"
+                                + this.Price + "', '" + this.CategoryID + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -101,7 +101,7 @@ namespace proj1
                 string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Exec [Delete Items] ' " + this.itemID + " ' ";
+                string query = "Exec [Delete Items] '" + this.itemID + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();

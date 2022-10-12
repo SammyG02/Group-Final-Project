@@ -97,7 +97,7 @@ namespace proj1
                         CustomerPass = txtPass.Text,
                         CustomerPhone = txtPhone.Text,
                         CustomerEmail = txtEmail.Text,                       
-                        CustomerBal = txtBal.Text,                        
+                        CustomerBal = decimal.Parse(txtBal.Text),                        
                         CustomerDate = dateTimePicker1.Text,
                     };
                     ins.InsertData();
@@ -133,7 +133,7 @@ namespace proj1
                             CustomerPass = txtPass.Text,
                             CustomerPhone = txtPhone.Text,
                             CustomerEmail = txtEmail.Text,
-                            CustomerBal = txtBal.Text,
+                            CustomerBal = decimal.Parse(txtBal.Text),
                             CustomerDate = dateTimePicker1.Text,
                         };
                         upd.UpdateData();

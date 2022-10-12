@@ -21,7 +21,7 @@ namespace proj1.Model
         public string CustomerName { get; set; }
         public string CustomerEmail { get; set; }
         public string CustomerPhone { get; set; }
-        public string CustomerBal { get; set; }
+        public decimal CustomerBal { get; set; }
         public string CustomerPass { get; set; }
 
 
@@ -42,10 +42,10 @@ namespace proj1.Model
                 string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Exec [Insert Customers] ' " + this.CustomerID + " ', '" 
-                                + this.CustomerName + " ', '" + this.CustomerPass + " ', '" 
-                                + this.CustomerPhone + " ', '" + this.CustomerEmail + " ', '"
-                                + this.CustomerBal + " ', '" + this.CustomerDate + " ' ";
+                string query = "Exec [Insert Customers] '" + this.CustomerID + "', '" 
+                                + this.CustomerName + "', '" + this.CustomerPass + "', '" 
+                                + this.CustomerPhone + "', '" + this.CustomerEmail + "', '"
+                                + this.CustomerBal + "', '" + this.CustomerDate + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -68,10 +68,10 @@ namespace proj1.Model
                 string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Exec [Update Customers] ' " + this.CustomerID + " ', '"
-                                + this.CustomerName + " ', '" + this.CustomerPass + " ', '"
-                                + this.CustomerPhone + " ', '" + this.CustomerEmail + " ', '"
-                                + this.CustomerBal + " ', '" + this.CustomerDate + " ' ";
+                string query = "Exec [Update Customers] '" + this.CustomerID + "', '"
+                                + this.CustomerName + "', '" + this.CustomerPass + "', '"
+                                + this.CustomerPhone + "', '" + this.CustomerEmail + "', '"
+                                + this.CustomerBal + "', '" + this.CustomerDate + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -93,7 +93,7 @@ namespace proj1.Model
                 string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Exec [Delete Customers] ' " + this.CustomerID + " ' ";
+                string query = "Exec [Delete Customers] '" + this.CustomerID + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();
@@ -129,7 +129,7 @@ namespace proj1.Model
                     p.CustomerPass = (string)sdr["CustomerPassword"];
                     p.CustomerPhone = (string)sdr["CustomerPhone"];
                     p.CustomerEmail = (string)sdr["CustomerEmail"];
-                    p.CustomerBal = (string)sdr["CustomerBalance"];
+                    p.CustomerBal = (decimal)sdr["CustomerBalance"];
                     p.CustomerDate = (string)sdr["dates"];
                     finalp.Add(p);
                 }

@@ -32,8 +32,8 @@ namespace proj1.Model
                 string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-                string query = "Exec [Insert Admins] ' " + this.signupName + " ', '" 
-                                + this.signupPassword + " ' ";
+                string query = "Exec [Insert Admins] '" + this.signupName + "', '" 
+                                + this.signupPassword + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 var result = cmd.ExecuteNonQuery();
                 con.Close();

@@ -18,7 +18,7 @@ namespace proj1
 {
     public partial class SellingPlace : Form
     {
-        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
         string itemRemaining="";
         string prodName = "";
         
@@ -52,10 +52,10 @@ namespace proj1
                     //getting balances value from customer database using the Customername that is passed
                     //during login
                     //since balance is int type we read it as into and change it to string type
-                    
-                    String customerBal = myReader.GetInt32(myReader.GetOrdinal("CustomerBalance")).ToString();
-                    
-                    lblBalance.Text = customerBal;
+
+                    decimal customerBal = (decimal)myReader["CustomerBalance"];
+
+                    lblBalance.Text = customerBal.ToString();
                     //setting lable to balance
                 }
 
@@ -179,7 +179,7 @@ namespace proj1
                 int totPrice = ((Int32.Parse(txtQuantity.Text)) * (Int32.Parse(lblPrice.Text)));
 
 
-                int balance = Int32.Parse(lblBalance.Text);
+                decimal balance = decimal.Parse(lblBalance.Text);
 
                 int itemLeft = Convert.ToInt32(itemRemaining);
                 int itemWanted = Convert.ToInt32(txtQuantity.Text);
@@ -200,7 +200,7 @@ namespace proj1
                     newRow.CreateCells(cartDGV);
                     newRow.Cells[0].Value = txtId.Text;
                     newRow.Cells[1].Value = prodName;
-                    newRow.Cells[2].Value = lblTot.Text;
+                    newRow.Cells[2].Value = lblPrice.Text;
                     newRow.Cells[3].Value = txtQuantity.Text;
                     newRow.Cells[4].Value = Convert.ToInt32(txtQuantity.Text) * Convert.ToInt32(lblPrice.Text);
 

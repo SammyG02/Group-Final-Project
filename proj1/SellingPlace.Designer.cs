@@ -42,7 +42,7 @@
             this.AddCart = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblGrandTot = new System.Windows.Forms.Label();
             this.lblTot = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cartDGV = new System.Windows.Forms.DataGridView();
@@ -56,6 +56,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.ErrP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartDGV)).BeginInit();
@@ -185,6 +186,7 @@
             this.button2.TabIndex = 22;
             this.button2.Text = "Check Out";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AddCart
             // 
@@ -222,16 +224,16 @@
             this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             // 
-            // label8
+            // lblGrandTot
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(948, 717);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 32);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Total :$0";
+            this.lblGrandTot.AutoSize = true;
+            this.lblGrandTot.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrandTot.ForeColor = System.Drawing.Color.White;
+            this.lblGrandTot.Location = new System.Drawing.Point(1057, 717);
+            this.lblGrandTot.Name = "lblGrandTot";
+            this.lblGrandTot.Size = new System.Drawing.Size(31, 32);
+            this.lblGrandTot.TabIndex = 26;
+            this.lblGrandTot.Text = "0";
             // 
             // lblTot
             // 
@@ -266,11 +268,11 @@
             this.itemQuantity,
             this.total});
             this.cartDGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cartDGV.Location = new System.Drawing.Point(450, 419);
+            this.cartDGV.Location = new System.Drawing.Point(519, 398);
             this.cartDGV.Name = "cartDGV";
             this.cartDGV.RowHeadersWidth = 51;
             this.cartDGV.RowTemplate.Height = 24;
-            this.cartDGV.Size = new System.Drawing.Size(796, 263);
+            this.cartDGV.Size = new System.Drawing.Size(676, 263);
             this.cartDGV.TabIndex = 28;
             this.cartDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cartDGV_CellContentClick);
             // 
@@ -279,6 +281,7 @@
             this.Id.HeaderText = "Item Id";
             this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             this.Id.Width = 125;
             // 
             // itemName
@@ -286,6 +289,7 @@
             this.itemName.HeaderText = "Name";
             this.itemName.MinimumWidth = 6;
             this.itemName.Name = "itemName";
+            this.itemName.ReadOnly = true;
             this.itemName.Width = 125;
             // 
             // itemPrice
@@ -293,6 +297,7 @@
             this.itemPrice.HeaderText = "Price";
             this.itemPrice.MinimumWidth = 6;
             this.itemPrice.Name = "itemPrice";
+            this.itemPrice.ReadOnly = true;
             this.itemPrice.Width = 125;
             // 
             // itemQuantity
@@ -300,6 +305,7 @@
             this.itemQuantity.HeaderText = "Quantity";
             this.itemQuantity.MinimumWidth = 6;
             this.itemQuantity.Name = "itemQuantity";
+            this.itemQuantity.ReadOnly = true;
             this.itemQuantity.Width = 125;
             // 
             // total
@@ -307,6 +313,7 @@
             this.total.HeaderText = "total";
             this.total.MinimumWidth = 6;
             this.total.Name = "total";
+            this.total.ReadOnly = true;
             this.total.Width = 125;
             // 
             // label1
@@ -358,19 +365,31 @@
             // 
             this.ErrP.ContainerControl = this;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(934, 717);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 32);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Total: $";
+            // 
             // SellingPlace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1280, 904);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cartDGV);
             this.Controls.Add(this.lblTot);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblGrandTot);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.AddCart);
@@ -415,18 +434,19 @@
         private System.Windows.Forms.Button AddCart;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtQuantity;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblGrandTot;
         private System.Windows.Forms.Label lblTot;
         private System.Windows.Forms.DataGridView cartDGV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.ErrorProvider ErrP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.Label label8;
     }
 }

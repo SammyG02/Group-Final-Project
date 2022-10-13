@@ -27,7 +27,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source =  LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source =  LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Exec [Insert Category] ' " + this.CategoryID + " ', '"
@@ -50,7 +50,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Exec [Update Category] ' " + this.CategoryID + " ', '"
@@ -73,7 +73,7 @@ namespace proj1
             //DBMS
             try
             {
-                string connectionstring = @"Data source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Exec [Delete Category] ' " + this.CategoryID + " ' ";
@@ -97,7 +97,7 @@ namespace proj1
             List<CategoryClass> finalp = new List<CategoryClass>();
             try
             {
-                string connectionstring = @"Data source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
+                string connectionstring = @"Data source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog= FinalProject; Integrated security= True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 string query = "Exec [Select Category]";

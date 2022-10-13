@@ -100,33 +100,33 @@ namespace proj1
             // 
             this.nametxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.nametxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nametxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.nametxt.Location = new System.Drawing.Point(279, 114);
             this.nametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nametxt.Name = "nametxt";
-            this.nametxt.Size = new System.Drawing.Size(182, 22);
+            this.nametxt.Size = new System.Drawing.Size(182, 30);
             this.nametxt.TabIndex = 6;
             // 
             // idtxt
             // 
             this.idtxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.idtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.idtxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.idtxt.Location = new System.Drawing.Point(39, 115);
             this.idtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.idtxt.Name = "idtxt";
-            this.idtxt.Size = new System.Drawing.Size(182, 22);
+            this.idtxt.Size = new System.Drawing.Size(182, 30);
             this.idtxt.TabIndex = 7;
             // 
             // quantitytxt
             // 
             this.quantitytxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.quantitytxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.quantitytxt.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitytxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.quantitytxt.Location = new System.Drawing.Point(39, 192);
             this.quantitytxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.quantitytxt.Name = "quantitytxt";
-            this.quantitytxt.Size = new System.Drawing.Size(182, 22);
+            this.quantitytxt.Size = new System.Drawing.Size(182, 30);
             this.quantitytxt.TabIndex = 8;
             // 
             // addbtn
@@ -222,22 +222,23 @@ namespace proj1
             // pricetxt
             // 
             this.pricetxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pricetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.pricetxt.Location = new System.Drawing.Point(279, 193);
             this.pricetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pricetxt.Name = "pricetxt";
-            this.pricetxt.Size = new System.Drawing.Size(182, 23);
+            this.pricetxt.Size = new System.Drawing.Size(182, 30);
             this.pricetxt.TabIndex = 16;
             // 
             // catrgoryCb
             // 
             this.catrgoryCb.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.catrgoryCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.catrgoryCb.FormattingEnabled = true;
             this.catrgoryCb.Location = new System.Drawing.Point(504, 143);
             this.catrgoryCb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.catrgoryCb.Name = "catrgoryCb";
             this.catrgoryCb.Size = new System.Drawing.Size(140, 25);
             this.catrgoryCb.TabIndex = 18;
-            this.catrgoryCb.Text = "...PlaceHolder";
             // 
             // label7
             // 

@@ -23,7 +23,7 @@ namespace proj1
         }
         void fillInCombo()
         {
-            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
             string query = "select RoleName from Role";
@@ -137,7 +137,7 @@ namespace proj1
                             MessageBox.Show("Access Granted");
                             if (check == 1)//admin
                             {
-                                new Form1().Show();
+                                new Form1(ins.loginName).Show();
                                 this.Hide();
                             }
                             else if (check == 10)//customer

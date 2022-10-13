@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,24 +14,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace proj1
 {
     public partial class SellingPlace : Form
     {
-        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
         string itemRemaining="";
         string prodName = "";
-        
-        
-        int index;
+        int grandTotal = 0;
+        decimal customerBal = 0;
+        int customerId = 0;
+        String customerName = "";
+
+
+
+
+        int index; 
 
         public SellingPlace(string LN)
         {
             InitializeComponent();
             this.Controls.Add(UserCO);
-            UserCO.Text = LN;
-            Info(LN);
+            customerName = LN;
+            UserCO.Text = customerName;
+            Info(customerName);
             
         }
 
@@ -53,8 +62,8 @@ namespace proj1
                     //during login
                     //since balance is int type we read it as into and change it to string type
 
-                    decimal customerBal = (decimal)myReader["CustomerBalance"];
-
+                    customerBal = (decimal)myReader["CustomerBalance"];
+                    customerId = (int)myReader["CustomerId"];
                     lblBalance.Text = customerBal.ToString();
                     //setting lable to balance
                 }
@@ -115,6 +124,17 @@ namespace proj1
 
             
         }
+        public void DisplayData()
+        {
+            SqlConnection con = new SqlConnection(connectionstring);
+            con.Open();
+            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
+            SqlDataAdapter cmd = new SqlDataAdapter(query, con);
+            DataTable dg = new DataTable();
+            cmd.Fill(dg);
+
+            DGVCO.DataSource = dg;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -164,6 +184,7 @@ namespace proj1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             ErrP.Clear();
             Regex checkquantity = new Regex(@"^([0-9]*)$");
             if (string.IsNullOrEmpty(txtQuantity.Text))
@@ -177,13 +198,15 @@ namespace proj1
             else
             {
                 int totPrice = ((Int32.Parse(txtQuantity.Text)) * (Int32.Parse(lblPrice.Text)));
-
+                
+                
 
                 decimal balance = decimal.Parse(lblBalance.Text);
 
                 int itemLeft = Convert.ToInt32(itemRemaining);
                 int itemWanted = Convert.ToInt32(txtQuantity.Text);
                 lblTot.Text = totPrice.ToString();
+                
 
                 if (totPrice > balance)
                 {
@@ -204,19 +227,43 @@ namespace proj1
                     newRow.Cells[3].Value = txtQuantity.Text;
                     newRow.Cells[4].Value = Convert.ToInt32(txtQuantity.Text) * Convert.ToInt32(lblPrice.Text);
 
+                    grandTotal = grandTotal + totPrice;
+                    if (grandTotal > balance)
+                    {
+                        grandTotal = grandTotal - totPrice;
+                        MessageBox.Show("Insufficient jBalance");
+                        lblGrandTot.Text = grandTotal.ToString();
+                    }
+                    else
+                    {
+                        
+                        lblGrandTot.Text = grandTotal.ToString();
+                        itemLeft = itemLeft - itemWanted;
+
+                        try
+                        {
+                            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                            SqlConnection con = new SqlConnection(connectionstring);
+                            con.Open();
+                            MessageBox.Show("stored");
+                            string query = "Exec [Update Quantity] '" + txtId.Text + "', '"
+                                            + itemLeft + "'";
+                            SqlCommand cmd = new SqlCommand(query, con);
+                            var result = cmd.ExecuteNonQuery();
+                            con.Close();
+                            MessageBox.Show("After");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        DisplayData();
+                        cartDGV.Rows.Add(newRow);
+
+                    }
 
 
-
-
-
-
-
-
-
-
-
-
-
+                    
 
 
 
@@ -226,13 +273,7 @@ namespace proj1
 
 
 
-
-
-
-
-
-
-                    cartDGV.Rows.Add(newRow);
+                    
 
                 }
 
@@ -289,6 +330,43 @@ namespace proj1
 
         private void label10_Click(object sender, EventArgs e)
         {
+
+        }
+        public void UpdateBal()
+        {
+
+            try
+            {
+                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                SqlConnection con = new SqlConnection(connectionstring);
+                con.Open();
+                
+                string query = "Exec [Update Balance] '" + customerId + "', '"
+                                + customerBal + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                var result = cmd.ExecuteNonQuery();
+                con.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //checkout button
+            MessageBox.Show("Purchase was a success!!");
+            customerBal = customerBal - grandTotal;
+            lblBalance.Text= customerBal.ToString();
+            grandTotal = 0;
+            lblGrandTot.Text="0";
+            UpdateBal();
+
+            new SellingPlace(customerName).Show();
+            this.Hide();
+
 
         }
     }

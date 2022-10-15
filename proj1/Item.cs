@@ -18,7 +18,7 @@ namespace proj1
         int index;
         
         //string catagoryinput = "temp";
-        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
         public Item()
         {
@@ -28,10 +28,10 @@ namespace proj1
 
          void fillCombo()
         {
-            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
-            string query = "select categoryName from Category";
+                string query = "select * from CategoryName()";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataReader myReader;  
                 myReader = cmd.ExecuteReader();

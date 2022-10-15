@@ -21,7 +21,7 @@ namespace proj1.Model
         public int check()
         {
             int checker=0;
-            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
 
             if (loginRole == "Admin")
             {

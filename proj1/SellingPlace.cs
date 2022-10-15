@@ -20,7 +20,7 @@ namespace proj1
 {
     public partial class SellingPlace : Form
     {
-        string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
         string itemRemaining="";
         string prodName = "";
         int grandTotal = 0;
@@ -242,7 +242,7 @@ namespace proj1
 
                         try
                         {
-                            string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                            string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                             SqlConnection con = new SqlConnection(connectionstring);
                             con.Open();
                             MessageBox.Show("stored");
@@ -337,7 +337,7 @@ namespace proj1
 
             try
             {
-                string connectionstring = @"Data Source = LAPTOP-T60OO29F\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+                string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
                 SqlConnection con = new SqlConnection(connectionstring);
                 con.Open();
                 

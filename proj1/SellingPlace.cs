@@ -49,7 +49,7 @@ namespace proj1
            
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "select * from Customers where CustomerName = '" + CusName + "'";
+            string query = "Exec [CusName]'" + CusName + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader myReader;
             myReader = cmd.ExecuteReader();
@@ -114,7 +114,7 @@ namespace proj1
             //getting the Item table from database
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
+            string query = "Exec [Insert Items and Category]";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);
@@ -128,7 +128,7 @@ namespace proj1
         {
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "Select itemId as Id,itemName as [Item Name],itemQuantity as Quantity,itemPrice as Price,categoryName as Category from Items i join Category c on i.catId = c.CategoryId";
+            string query = "Exec [Insert Items and Category]";
             SqlDataAdapter cmd = new SqlDataAdapter(query, con);
             DataTable dg = new DataTable();
             cmd.Fill(dg);

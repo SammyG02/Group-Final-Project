@@ -112,6 +112,7 @@ namespace proj1
             }
         }
 
+        //--
         public void Outofstock()
         {
             //Grid

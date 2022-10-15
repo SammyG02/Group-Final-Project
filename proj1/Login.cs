@@ -26,7 +26,7 @@ namespace proj1
             string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
             SqlConnection con = new SqlConnection(connectionstring);
             con.Open();
-            string query = "select RoleName from Role";
+            string query = "Exec [Select Role]";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader myReader;
             myReader = cmd.ExecuteReader();

@@ -138,6 +138,9 @@ namespace proj1
             cust.MdiParent = this;
             cust.Hide();
 
+            Home home = new Home();
+            home.MdiParent = this;
+            home.Show();
 
         }
 

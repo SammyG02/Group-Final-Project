@@ -52,6 +52,12 @@
     <Compile Include="Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CategoryClass.cs" />
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
@@ -110,6 +116,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Item.resx">
       <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +165,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-karolina-grabowska-5632361.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-felipe-paes-3728311.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-felipe-paes-37283.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_8_7807110024.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -73,9 +73,49 @@ namespace proj1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imageedit_8_7807110024 {
+            get {
+                object obj = ResourceManager.GetObject("imageedit_8_7807110024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man {
             get {
                 object obj = ResourceManager.GetObject("man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_felipe_paes_37283 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-felipe-paes-37283", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_felipe_paes_3728311 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-felipe-paes-3728311", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_karolina_grabowska_5632361 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-karolina-grabowska-5632361", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

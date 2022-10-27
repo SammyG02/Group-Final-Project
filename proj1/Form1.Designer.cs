@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnItems = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.UserAd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.UserAd = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -48,7 +47,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnCategory);
@@ -62,21 +60,6 @@
             this.panel1.Size = new System.Drawing.Size(308, 904);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.button1.Location = new System.Drawing.Point(0, 494);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 78);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Contact";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnSettings
             // 
@@ -103,7 +86,7 @@
             this.btnCustomer.Location = new System.Drawing.Point(0, 416);
             this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(308, 78);
+            this.btnCustomer.Size = new System.Drawing.Size(308, 73);
             this.btnCustomer.TabIndex = 1;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.UseVisualStyleBackColor = true;
@@ -169,17 +152,6 @@
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // UserAd
-            // 
-            this.UserAd.AutoSize = true;
-            this.UserAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserAd.ForeColor = System.Drawing.Color.White;
-            this.UserAd.Location = new System.Drawing.Point(314, 9);
-            this.UserAd.Name = "UserAd";
-            this.UserAd.Size = new System.Drawing.Size(106, 31);
-            this.UserAd.TabIndex = 3;
-            this.UserAd.Text = "Online ";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -202,6 +174,17 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // UserAd
+            // 
+            this.UserAd.AutoSize = true;
+            this.UserAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserAd.ForeColor = System.Drawing.Color.White;
+            this.UserAd.Location = new System.Drawing.Point(314, 9);
+            this.UserAd.Name = "UserAd";
+            this.UserAd.Size = new System.Drawing.Size(106, 31);
+            this.UserAd.TabIndex = 3;
+            this.UserAd.Text = "Online ";
             // 
             // label3
             // 
@@ -253,7 +236,6 @@
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label UserAd;
     }
 }

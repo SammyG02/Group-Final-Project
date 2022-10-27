@@ -20,7 +20,7 @@ namespace proj1
 {
     public partial class SellingPlace : Form
     {
-        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = True;";
+        string connectionstring = @"Data Source = LAPTOP-BBJ3R5V0\SQLEXPRESS; Initial Catalog = FinalProject; Integrated Security = False; User Id = Sellinglog;Password = Selllog";
         string itemRemaining="";
         string prodName = "";
         int grandTotal = 0;

@@ -36,8 +36,8 @@
             this.btnItems = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UserAd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -61,6 +61,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(308, 904);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -159,7 +160,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -167,30 +167,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 233);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // UserAd
+            // 
+            this.UserAd.AutoSize = true;
+            this.UserAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserAd.ForeColor = System.Drawing.Color.White;
+            this.UserAd.Location = new System.Drawing.Point(314, 9);
+            this.UserAd.Name = "UserAd";
+            this.UserAd.Size = new System.Drawing.Size(106, 31);
+            this.UserAd.TabIndex = 3;
+            this.UserAd.Text = "Online ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label2.Location = new System.Drawing.Point(100, 183);
+            this.label2.Location = new System.Drawing.Point(100, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Online ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.lblName.Location = new System.Drawing.Point(91, 136);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(177, 31);
-            this.lblName.TabIndex = 1;
-            this.lblName.Text = "Abem Wolde";
-            this.lblName.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -222,6 +222,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1280, 904);
+            this.Controls.Add(this.UserAd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -246,7 +247,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnCustomer;
@@ -254,6 +254,7 @@
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label UserAd;
     }
 }
 

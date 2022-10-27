@@ -12,10 +12,15 @@ namespace proj1
 {
     public partial class Form1 : Form
     {
-        public Form1(String LN)
+        String Adminname = "";
+
+        public Form1(string l)
         {
             InitializeComponent();
-            lblName.Text = LN;  
+            this.Controls.Add(UserAd);
+            Adminname = l;
+            UserAd.Text = Adminname;
+            
         }
 
         private void btnContact_Click(object sender, EventArgs e)
@@ -24,6 +29,7 @@ namespace proj1
             btnItems.ForeColor = Color.Gray;
             btnCategory.ForeColor = Color.Gray;
             btnHome.ForeColor = Color.Gray;
+            //panel1.BackColor = Color.FromArgb(9, 43, 0);
 
             if (ActiveMdiChild != null)
             {
@@ -40,6 +46,7 @@ namespace proj1
             btnCategory.ForeColor = Color.Gray;    
             btnCustomer.ForeColor = Color.Gray;
             btnHome.ForeColor = Color.Gray;
+
             
             if (ActiveMdiChild != null)
             {
@@ -113,6 +120,24 @@ namespace proj1
             btnCategory.ForeColor = Color.Gray;
             btnCustomer.ForeColor = Color.Gray;
             btnHome.ForeColor = Color.White;
+            
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            
+            Category cate = new Category();
+            cate.MdiParent = this;
+            cate.Hide();
+
+            Item ite = new Item();
+            ite.MdiParent = this;
+            ite.Hide();
+
+            Customer cust = new Customer();
+            cust.MdiParent = this;
+            cust.Hide();
+
 
         }
 
@@ -120,6 +145,16 @@ namespace proj1
         {
             new Login().Show();
             this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            this.Controls.Add(UserAd);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            this.Controls.Add(UserAd);
         }
     }
 }

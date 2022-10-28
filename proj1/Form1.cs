@@ -23,13 +23,14 @@ namespace proj1
             
         }
 
+        //Customer Button
         private void btnContact_Click(object sender, EventArgs e)
         {
             btnCustomer.ForeColor = Color.White;
-            btnItems.ForeColor = Color.Gray;
-            btnCategory.ForeColor = Color.Gray;
-            btnHome.ForeColor = Color.Gray;
-            //panel1.BackColor = Color.FromArgb(9, 43, 0);
+            btnItems.ForeColor = Color.FromArgb(0, 126, 249);
+            btnCategory.ForeColor = Color.FromArgb(0, 126, 249);
+            btnHome.ForeColor = Color.FromArgb(0, 126, 249);
+            
 
             if (ActiveMdiChild != null)
             {
@@ -40,12 +41,14 @@ namespace proj1
             cust.Show();
         }
 
+        
+        //Items
         private void btnAlalytics_Click(object sender, EventArgs e)
         {
             btnItems.ForeColor = Color.White;
-            btnCategory.ForeColor = Color.Gray;    
-            btnCustomer.ForeColor = Color.Gray;
-            btnHome.ForeColor = Color.Gray;
+            btnCategory.ForeColor = Color.FromArgb(0, 126, 249);    
+            btnCustomer.ForeColor = Color.FromArgb(0, 126, 249);
+            btnHome.ForeColor = Color.FromArgb(0, 126, 249);
 
             
             if (ActiveMdiChild != null)
@@ -97,12 +100,14 @@ namespace proj1
             System.Environment.Exit(0);
         }
 
+        
+        //Category
         private void btnCalander_Click(object sender, EventArgs e)
         {
-            btnItems.ForeColor = Color.Gray;
+            btnItems.ForeColor = Color.FromArgb(0, 126, 249);
             btnCategory.ForeColor = Color.White;
-            btnCustomer.ForeColor = Color.Gray;
-            btnHome.ForeColor = Color.Gray;
+            btnCustomer.ForeColor = Color.FromArgb(0, 126, 249);
+            btnHome.ForeColor = Color.FromArgb(0, 126, 249);
 
 
             if (ActiveMdiChild != null)
@@ -114,13 +119,32 @@ namespace proj1
             cate.Show();
         }
 
+        
+        //Home
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            btnItems.ForeColor = Color.Gray;
-            btnCategory.ForeColor = Color.Gray;
-            btnCustomer.ForeColor = Color.Gray;
+            btnItems.ForeColor = Color.FromArgb(0, 126, 249);
+            btnCategory.ForeColor = Color.FromArgb(0, 126, 249);
+            btnCustomer.ForeColor = Color.FromArgb(0, 126, 249);
             btnHome.ForeColor = Color.White;
-            
+
+            MdiClient ctlMDI;
+
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    ctlMDI = (MdiClient)ctl;
+
+                    ctlMDI.BackColor = Color.FromArgb(24, 30, 54);
+                }
+
+                catch (InvalidCastException exc)
+                {
+
+                }
+            }
+
             if (ActiveMdiChild != null)
             {
                 ActiveMdiChild.Close();

@@ -41,17 +41,20 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginRoleCb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 674);
@@ -203,17 +206,6 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Don\'t Have An Account?";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::proj1.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(511, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // loginRoleCb
             // 
             this.loginRoleCb.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,6 +232,26 @@
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::proj1.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(511, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::proj1.Properties.Resources.Logo;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(13, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(236, 238);
+            this.panel2.TabIndex = 0;
             // 
             // Login
             // 
@@ -269,8 +281,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +307,6 @@
         private System.Windows.Forms.ComboBox loginRoleCb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Panel panel2;
     }
 }

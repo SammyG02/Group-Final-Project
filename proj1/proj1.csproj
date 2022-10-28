@@ -178,5 +178,8 @@
   <ItemGroup>
     <None Include="Resources\imageedit_8_7807110024.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

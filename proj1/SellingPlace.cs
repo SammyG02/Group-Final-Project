@@ -251,7 +251,7 @@ namespace proj1
                             SqlCommand cmd = new SqlCommand(query, con);
                             var result = cmd.ExecuteNonQuery();
                             con.Close();
-                            MessageBox.Show("After");
+                            //MessageBox.Show("After");
                         }
                         catch (Exception ex)
                         {

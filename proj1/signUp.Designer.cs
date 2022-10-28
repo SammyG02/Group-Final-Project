@@ -44,10 +44,12 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.checkBoxSignupShowPassword = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -66,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-6, -2);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
@@ -80,7 +83,7 @@
             this.label4.Location = new System.Drawing.Point(439, -2);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 46);
+            this.label4.Size = new System.Drawing.Size(197, 45);
             this.label4.TabIndex = 12;
             this.label4.Text = "Get Started";
             // 
@@ -92,7 +95,7 @@
             this.label1.Location = new System.Drawing.Point(422, 103);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 46);
+            this.label1.Size = new System.Drawing.Size(225, 45);
             this.label1.TabIndex = 13;
             this.label1.Text = "Sign Up Page";
             // 
@@ -245,6 +248,10 @@
             this.label8.Text = "Back To Login";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::proj1.Properties.Resources.user;
@@ -256,9 +263,14 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
-            // errorProvider1
+            // panel2
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.panel2.BackgroundImage = global::proj1.Properties.Resources.Logo;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(19, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(235, 239);
+            this.panel2.TabIndex = 0;
             // 
             // signUp
             // 
@@ -289,8 +301,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "signUp";
             this.Load += new System.EventHandler(this.signUp_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +328,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

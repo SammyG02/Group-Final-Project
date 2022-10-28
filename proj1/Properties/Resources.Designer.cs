@@ -83,6 +83,16 @@ namespace proj1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man {
             get {
                 object obj = ResourceManager.GetObject("man", resourceCulture);
@@ -116,6 +126,16 @@ namespace proj1.Properties {
         internal static System.Drawing.Bitmap pexels_karolina_grabowska_5632361 {
             get {
                 object obj = ResourceManager.GetObject("pexels-karolina-grabowska-5632361", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_karolina_grabowska_56323611 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-karolina-grabowska-56323611", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
